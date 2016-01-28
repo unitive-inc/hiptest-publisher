@@ -19,3 +19,11 @@ pkg
 
 # Ignore gem
 *.gem
+
+Dockerfile
+.gitignore
+.travis.yml
+*~
+*/*~
+*/*/*~
+*/*/*/*~
