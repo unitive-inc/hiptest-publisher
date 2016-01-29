@@ -1,0 +1,18 @@
+---
+- name: the setup for RequisitionCopyCtrl
+  uid: d9910b5a-64ce-4949-8b3a-9066c47fbbeb
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: it should show a job description popup
+  uid: a6d43737-4bd1-4435-a3d5-afb6774e5f86
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: it should request to copy the given req and navigate to the requisition edit
+    page
+  uid: 118cc205-bf99-419b-bffc-b4f6e3278908
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: it should show an error if it fails
+  uid: 6b7ab929-6dcb-4a80-b691-d8185b8da912
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
