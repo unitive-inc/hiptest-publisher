@@ -1,6 +1,8 @@
 Dockerfile
 .gitignore
 .travis.yml
+
+# emacs temp files
 *~
 */*~
 */*/*~
