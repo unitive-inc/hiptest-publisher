@@ -1,0 +1,22 @@
+---
+- name: the setup for RequisitionCopyCtrl
+  uid: d9910b5a-64ce-4949-8b3a-9066c47fbbeb
+  parameters: []
+- name: it should show a job description popup
+  uid: a6d43737-4bd1-4435-a3d5-afb6774e5f86
+  parameters: []
+- name: it should request to copy the given req and navigate to the requisition edit
+    page
+  uid: 118cc205-bf99-419b-bffc-b4f6e3278908
+  parameters: []
+- name: it should show an error if it fails
+  uid: 6b7ab929-6dcb-4a80-b691-d8185b8da912
+  parameters: []
+- name: it should show "p1" reqs
+  uid: 9abc525d-c012-49c3-a7fe-16c494c08071
+  parameters:
+  - name: p1
+- name: it should show "p1" link
+  uid: 2f0fd4da-0865-46f7-8774-cdb4ae49affa
+  parameters:
+  - name: p1

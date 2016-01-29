@@ -19,6 +19,7 @@ module Hiptest
     private
 
     def prune_tags
+      return unless @options.filter_tags
       filter_tags = Set.new @options.filter_tags.split(',')
       return if filter_tags.empty?
       puts "Pruning scenarios for tags: #{filter_tags.to_a.join(',')}" if @options.verbose
