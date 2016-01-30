@@ -18,8 +18,12 @@ module Hiptest
 
     private
 
+    def filters?
+      return !@options.filter_tags.empty?
+    end
+
     def prune_tags
-      return unless @options.filter_tags
+      return unless filters?
       filter_tags = Set.new @options.filter_tags.split(',')
       return if filter_tags.empty?
       puts "Pruning scenarios for tags: #{filter_tags.to_a.join(',')}" if @options.verbose
@@ -31,13 +35,14 @@ module Hiptest
         } if @options.verbose
         # Remove the scenario if it doesn't have any of the desired tags
         if filter_tags.disjoint?(scenario_tags)
-          puts "Pruning!"
+          puts "Pruning!" if @options.verbose
           scenario.remove
         end
       }
     end
 
     def prune_actionwords
+      return unless filters?
       # Collect the actionwords used by all scenarios.
       used = collect_actionwords_used
       # Extend them with actionwords used by other used actionwords.
