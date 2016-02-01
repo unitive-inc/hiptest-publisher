@@ -10,4 +10,4 @@ docker-image :
 	docker build -t $(DOCKER_IMAGE) .
 
 test : docker-image
-	docker run --tty --user $$UID --rm $(DOCKER_IMAGE) bundle exec rspec
+	docker run --interactive --tty --user $$UID --rm $(DOCKER_IMAGE) bundle exec rspec
