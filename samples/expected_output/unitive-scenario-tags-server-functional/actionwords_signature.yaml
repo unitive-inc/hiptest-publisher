@@ -1,0 +1,94 @@
+---
+- name: the tenant not configured for SAML
+  uid: ee6505fc-526d-4903-84d5-86014a5ff301
+  parameters: []
+- name: existing user "p1"
+  uid: d00b6562-bba0-4ac7-833f-ec90f9a78e0e
+  parameters:
+  - name: p1
+- name: '"p1" logs in'
+  uid: b751948f-ba3f-4e09-b8d2-1d0756f96ab7
+  parameters:
+  - name: p1
+- name: page "p1" is presented.
+  uid: 34505c11-31f7-4625-bb67-19f424faf2ea
+  parameters:
+  - name: p1
+- name: '"p1" is returned.'
+  uid: 6248a98b-3b1d-4722-955a-8cc99128f815
+  parameters:
+  - name: p1
+- name: '"p1" accesses "p2"'
+  uid: f5ccea43-fde2-487c-a161-f99934909740
+  parameters:
+  - name: p1
+  - name: p2
+- name: a one-time user credential
+  uid: d0612cbe-4fa6-4953-b578-a0b61f09a136
+  parameters: []
+- name: the one-time user logs in
+  uid: cdda39f0-545a-49a0-9c38-1a21db7edae2
+  parameters: []
+- name: the one-time user page is presented.
+  uid: 38f9170e-d4b9-410b-be28-16579a298ac9
+  parameters: []
+- name: admin user "p1"
+  uid: d02feae5-f968-42c3-84b2-2fb6b618a5f9
+  parameters:
+  - name: p1
+- name: SAML IDP information is submitted to "p1"
+  uid: 4c1dc8bd-6201-4c72-a4b2-f60fd90a5794
+  parameters:
+  - name: p1
+- name: result code "p1" is returned
+  uid: 6c9ed8cb-2b93-4a3d-a4cd-a972dc0d16f2
+  parameters:
+  - name: p1
+- name: the tenant configured for SAML
+  uid: e2184228-e1a4-4e13-9ea8-c6ebd800fc50
+  parameters: []
+- name: '"p1" logs in with SAML'
+  uid: 009384cb-6282-4168-8598-70ea652517fa
+  parameters:
+  - name: p1
+- name: '"p1" access "p2"'
+  uid: 81d29906-7ad4-4d53-9f4b-bc2e439b4a3f
+  parameters:
+  - name: p1
+  - name: p2
+- name: '"p1" is not logged in'
+  uid: 5d9d903b-7d61-4bb1-a4f6-3f5cab926180
+  parameters:
+  - name: p1
+- name: '"p1" accesses page.html'
+  uid: b84ba73e-336c-4f5a-aed7-85fa3e695c64
+  parameters:
+  - name: p1
+- name: a redirect to the SAML IDP URL returned
+  uid: edd5b19a-29c5-4d70-ae65-5dbbef5d3eb6
+  parameters: []
+- name: '"p1" is logged in'
+  uid: bd0d6c81-051f-41d3-8023-65635e154b8b
+  parameters:
+  - name: p1
+- name: user "p1" with no account
+  uid: 606a9adc-1d20-4bcb-b790-0c61bf44406f
+  parameters:
+  - name: p1
+- name: user account "p1" is created
+  uid: 3583579d-dce5-4265-8478-77be76d11bfa
+  parameters:
+  - name: p1
+- name: a SAML POST response for "p1" is sent to "p2"
+  uid: f7e40ead-5d5b-41ea-a902-d44e58592f12
+  parameters:
+  - name: p1
+  - name: p2
+- name: existing super user "p1"
+  uid: d87da128-4fdb-4615-be3a-41cf45d7c4d1
+  parameters:
+  - name: p1
+- name: '"p1" is not a super user'
+  uid: fe73a811-8809-43bb-8198-7eb42f1d92a4
+  parameters:
+  - name: p1
