@@ -107,6 +107,8 @@ module Hiptest
       more = Set.new
       @xml.css('> project > actionwords > actionword').each { |actionword|
         name = actionword_name(actionword)
+        # See if this actionword is used.
+        next unless used.include?(name)
         # See if this actionword calls others.
         actionword.css('> steps > call').each { |call|
           called_actionword = call_actionword(call)
