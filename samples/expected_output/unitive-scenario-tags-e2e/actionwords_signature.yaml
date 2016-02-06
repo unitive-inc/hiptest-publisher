@@ -1,0 +1,36 @@
+---
+- name: it should show the search bar
+  uid: 4ba6f594-9205-4e1b-93bd-e50a40cc836a
+  parameters: []
+- name: I'm on the Job Copy page
+  uid: 38770678-af44-4b11-b13a-fc1eac87c04d
+  parameters: []
+- name: it should show the list of available reqs and the extra data with it
+  uid: 7e259a35-64d0-4d4f-a961-85b3a7ae7118
+  parameters: []
+- name: it should show a no-data message when there are no reqs available to the user
+  uid: b2b23573-abcb-4d1a-9ba4-2a7b0f9f1955
+  parameters: []
+- name: it should show a no-data message when there are no reqs after searching/filtering
+  uid: d1f1092e-a953-4378-8810-87cdb731aa41
+  parameters: []
+- name: it should show the job description when clicking the "p1" button
+  uid: 3760f85b-8bde-41e1-aec4-a2a0fed82261
+  parameters:
+  - name: p1
+- name: it should create a copy of the req and job description when clicking the "p1"
+    button
+  uid: 550968be-7422-4fd2-bfe5-bb264acfede8
+  parameters:
+  - name: p1
+- name: it should show ten reqs and a show more link
+  uid: c5bc4e32-5ecd-493b-927e-c12abbe088b2
+  parameters: []
+- name: it should show "p1" reqs
+  uid: 9abc525d-c012-49c3-a7fe-16c494c08071
+  parameters:
+  - name: p1
+- name: it should show "p1" link
+  uid: 2f0fd4da-0865-46f7-8774-cdb4ae49affa
+  parameters:
+  - name: p1

@@ -681,9 +681,14 @@ describe Hiptest::Publisher do
       publisher.run
     end
 
-    it "selects the tagged scenarios" do
+    it "selects the tagged scenarios (client-unit)" do
       run_publisher_command("--scenario-tags", "client-unit")
       expect_same_files("samples/expected_output/unitive-scenario-tags-client-unit", output_dir)
+    end
+
+    it "selects the tagged scenarios (e2e)" do
+      run_publisher_command("--scenario-tags", "e2e")
+      expect_same_files("samples/expected_output/unitive-scenario-tags-e2e", output_dir)
     end
   end
 end
