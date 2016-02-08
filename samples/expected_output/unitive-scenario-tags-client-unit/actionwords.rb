@@ -16,12 +16,4 @@ module Actionwords
   def it_should_show_an_error_if_it_fails
 
   end
-
-  def it_should_show_p1_reqs(p1)
-
-  end
-
-  def it_should_show_p1_link(p1)
-
-  end
 end
