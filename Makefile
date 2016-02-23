@@ -19,7 +19,7 @@ test : docker-image
 	$(DOCKER_RUN_TEST)
 
 # Create targets for running individual spec files.
-SPEC_FILES=$(wildcard spec/*_spec.rb)
+SPEC_FILES=$(wildcard spec/*_spec.rb) $(wildcard spec/*/*_spec.rb)
 SPECS=$(patsubst spec/%_spec.rb,%,$(SPEC_FILES))
 SPEC_TESTS=$(patsubst %,test-%,$(SPECS))
 .PHONY : $(SPEC_TESTS)
