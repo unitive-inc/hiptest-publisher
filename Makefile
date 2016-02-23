@@ -4,9 +4,12 @@
 
 default : test
 
+Gemfile.lock : Gemfile
+	docker run --rm -v "$$(pwd)":/usr/src/app -w /usr/src/app ruby:2.2 bundle install
+
 DOCKER_IMAGE = unitive/hiptest-publisher
 
-docker-image :
+docker-image : Gemfile.lock
 	docker build -t $(DOCKER_IMAGE) .
 
 DOCKER_RUN_TEST=docker run --interactive --tty --user $$UID --rm \
