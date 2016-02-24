@@ -164,6 +164,7 @@ class OptionsParser
       Option.new(nil, 'show-actionwords-renamed', false, nil, "Output signatures of renamed action words", :aw_renamed),
       Option.new(nil, 'show-actionwords-signature-changed', false, nil, "Output signatures of action words for which signature changed", :aw_signature_changed),
       Option.new(nil, 'show-actionwords-definition-changed', false, nil, "Output action words for which definition changed", :aw_definition_changed),
+      Option.new(nil, 'merge-root-folders', false, nil, "Merge root folders when exporting", :merge_root_folders),
       Option.new(nil, 'with-folders', false, nil, "Use folders hierarchy to export files in respective directories", :with_folders),
       Option.new(nil, 'split-scenarios', false, nil, "Export each scenario in a single file", :split_scenarios),
       Option.new(nil, 'leafless-export', false, nil, "Use only last level action word", :leafless_export),
@@ -359,6 +360,7 @@ class LanguageGroupConfig
     @output_directory = user_params.output_directory || ""
     @filename_pattern = user_params.filename_pattern
     @split_scenarios = user_params.split_scenarios
+    @merge_root_folders = user_params.merge_root_folders
     @with_folders = user_params.with_folders
     @leafless_export = user_params.leafless_export
     @language_group_params = language_group_params || {}
@@ -372,6 +374,10 @@ class LanguageGroupConfig
 
   def filename_pattern
     @filename_pattern || self[:named_filename]
+  end
+
+  def merge_root_folders?
+    @merge_root_folders
   end
 
   def with_folders?
@@ -489,7 +495,7 @@ class LanguageGroupConfig
     return "" unless with_folders?
     folder = node.folder
     hierarchy = []
-    while folder && !folder.root?
+    while folder && !folder.root? && !(merge_root_folders? && folder.parent.root?)
       hierarchy << normalized_dirname(folder.children[:name])
       folder = folder.parent
     end
