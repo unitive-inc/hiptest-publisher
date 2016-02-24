@@ -160,6 +160,7 @@ class OptionsParser
       Option.new(nil, 'show-actionwords-created', false, nil, "Output code for new action words", :aw_created),
       Option.new(nil, 'show-actionwords-renamed', false, nil, "Output signatures of renamed action words", :aw_renamed),
       Option.new(nil, 'show-actionwords-signature-changed', false, nil, "Output signatures of action words for which signature changed", :aw_signature_changed),
+      Option.new(nil, 'merge-root-folders', false, nil, "Merge root folders when exporting", :merge_root_folders),
       Option.new(nil, 'with-folders', false, nil, "Use folders hierarchy to export files in respective directories", :with_folders),
       Option.new(nil, 'split-scenarios', false, nil, "Export each scenario in a single file", :split_scenarios),
       Option.new(nil, 'leafless-export', false, nil, "Use only last level action word", :leafless_export),
@@ -354,6 +355,7 @@ class LanguageGroupConfig
   def initialize(user_params, language_group_params = nil)
     @output_directory = user_params.output_directory || ""
     @split_scenarios = user_params.split_scenarios
+    @merge_root_folders = user_params.merge_root_folders
     @with_folders = user_params.with_folders
     @leafless_export = user_params.leafless_export
     @language_group_params = language_group_params || {}
@@ -363,6 +365,10 @@ class LanguageGroupConfig
 
   def [](key)
     @language_group_params[key]
+  end
+
+  def merge_root_folders?
+    @merge_root_folders
   end
 
   def with_folders?
@@ -480,7 +486,7 @@ class LanguageGroupConfig
     return "" unless with_folders?
     folder = node.folder
     hierarchy = []
-    while folder && !folder.root?
+    while folder && !folder.root? && !(merge_root_folders? && folder.parent.root?)
       hierarchy << normalized_dirname(folder.children[:name])
       folder = folder.parent
     end
