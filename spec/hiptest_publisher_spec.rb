@@ -17,7 +17,7 @@ describe Hiptest::Publisher do
 
   after(:each) {
     if @output_dir_created
-      #FileUtils.rm_rf(output_dir)
+      FileUtils.rm_rf(output_dir)
     end
   }
 
