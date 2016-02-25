@@ -1,6 +1,6 @@
 describe('useJobDescription()', function () {
   beforeEach(function () {
-    this.actionwords = Object.create(require('../../../../../actionwords.js').Actionwords);
+    this.actionwords = Object.create(require('../../../../actionwords.js').Actionwords);
   });
 
   it('It should request to copy the given req and navigate to the requisition edit page', function () {
