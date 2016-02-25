@@ -327,7 +327,7 @@ describe Hiptest::Publisher do
       common_files = (actual_files & expected_files)
       common_files.each do |file|
         actual_file = "#{actual_directory}/#{file}"
-        expected_file = "#{actual_directory}/#{file}"
+        expected_file = "#{expected_directory}/#{file}"
         if File.directory?(expected_file)
           expect(File.directory?(actual_file)).to eq(true), "Expected #{file} to be a directory"
           expect_same_files(expected_file, actual_file)
