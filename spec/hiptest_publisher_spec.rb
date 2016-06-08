@@ -327,9 +327,16 @@ describe Hiptest::Publisher do
 
       common_files = (actual_files & expected_files)
       common_files.each do |file|
-        actual_content = File.read("#{actual_directory}/#{file}")
-        expected_content = File.read("#{expected_directory}/#{file}")
-        expect(actual_content).to eq(expected_content), "File #{file} output is different from its expected output"
+        actual_file = "#{actual_directory}/#{file}"
+        expected_file = "#{expected_directory}/#{file}"
+        if File.directory?(expected_file)
+          expect(File.directory?(actual_file)).to eq(true), "Expected #{file} to be a directory"
+          expect_same_files(expected_file, actual_file)
+        else
+          actual_content = File.read(actual_file)
+          expected_content = File.read(expected_file)
+          expect(actual_content).to eq(expected_content), "File #{file} output is different from its expected output"
+        end
       end
     end
   end
@@ -753,6 +760,71 @@ describe Hiptest::Publisher do
     it "works" do
       run_publisher_command("--filename-pattern", "%s.spec.js")
       expect_same_files("samples/expected_output/filename-pattern", output_dir)
+    end
+  end
+
+  describe "--scenario-tags (without snapshots)" do
+    def run_publisher_command(*extra_args)
+      stub_request(:get, "https://hiptest.net/publication/123456789/project").
+        to_return(body: File.read('samples/xml_input/unitive_sandbox.xml'))
+      args = [
+        "--language", "ruby",
+        "--output-directory", output_dir,
+        "--token", "123456789",
+      ] + extra_args
+      publisher = Hiptest::Publisher.new(args, listeners: [ErrorListener.new])
+      publisher.run
+    end
+
+    it "selects the tagged scenarios (client-unit)" do
+      run_publisher_command("--scenario-tags", "client-unit")
+      expect_same_files("samples/expected_output/unitive-scenario-tags-client-unit", output_dir)
+    end
+
+    it "selects the tagged scenarios (e2e)" do
+      run_publisher_command("--scenario-tags", "e2e")
+      expect_same_files("samples/expected_output/unitive-scenario-tags-e2e", output_dir)
+    end
+  end
+
+  describe "--scenario-tags (with snapshots)" do
+    def run_publisher_command(*extra_args)
+      stub_request(:get, "https://hiptest.net/publication/123456789/project").
+        to_return(body: File.read('samples/xml_input/unitive.xml'))
+      args = [
+        "--language", "ruby",
+        "--output-directory", output_dir,
+        "--token", "123456789",
+      ] + extra_args
+      publisher = Hiptest::Publisher.new(args, listeners: [ErrorListener.new])
+      publisher.run
+    end
+
+    it "selects the tagged scenarios (server-functional)" do
+      run_publisher_command("--scenario-tags", "server-functional")
+      expect_same_files("samples/expected_output/unitive-scenario-tags-server-functional", output_dir)
+    end
+  end
+
+  describe "--merge-root-folders (without snapshots)" do
+    def run_publisher_command(*extra_args)
+      stub_request(:get, "https://hiptest.net/publication/123456789/project").
+        to_return(body: File.read('samples/xml_input/unitive_sandbox.xml'))
+      args = [
+        "--language", "javascript",
+        "--framework", "mocha",
+        "--output-directory", output_dir,
+        "--merge-root-folders",
+        "--with-folders",
+        "--token", "123456789",
+      ] + extra_args
+      publisher = Hiptest::Publisher.new(args, listeners: [ErrorListener.new])
+      publisher.run
+    end
+
+    it "selects the tagged scenarios (client-unit)" do
+      run_publisher_command("--scenario-tags", "client-unit")
+      expect_same_files("samples/expected_output/unitive-root-folder-client-unit", output_dir)
     end
   end
 end

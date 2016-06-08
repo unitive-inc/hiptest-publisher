@@ -1,0 +1,1766 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project format="0.1">
+  <name>Unitive Sandbox</name>
+  <uid>4bde3f99-5495-4b45-8114-9ba5030e6c3e</uid>
+  <testPlan>
+    <folder>
+      <name>Unitive</name>
+      <uid>77e37562-0f29-4f8a-9190-e77da40cd0b0</uid>
+      <order_in_parent>8388259</order_in_parent>
+    </folder>
+    <folder>
+      <name>Production</name>
+      <uid>c53c9107-10eb-445e-9bff-8ed608c12d81</uid>
+      <parentUid>77e37562-0f29-4f8a-9190-e77da40cd0b0</parentUid>
+      <order_in_parent>8384512</order_in_parent>
+    </folder>
+    <folder>
+      <name>Canary</name>
+      <uid>f2734d0a-87cf-44d1-b854-663a202df63c</uid>
+      <parentUid>77e37562-0f29-4f8a-9190-e77da40cd0b0</parentUid>
+      <order_in_parent>8380416</order_in_parent>
+    </folder>
+    <folder>
+      <name>Icebox</name>
+      <uid>d0578315-6498-417f-a358-733ab1577a9e</uid>
+      <parentUid>77e37562-0f29-4f8a-9190-e77da40cd0b0</parentUid>
+      <order_in_parent>7995392</order_in_parent>
+    </folder>
+    <folder>
+      <name>Bugs</name>
+      <uid>37cb44ad-adc6-4b42-a513-75da5396f3ac</uid>
+      <parentUid>77e37562-0f29-4f8a-9190-e77da40cd0b0</parentUid>
+      <order_in_parent>1835009</order_in_parent>
+    </folder>
+    <folder>
+      <name>Complete</name>
+      <uid>e948ff41-fd9d-4ac8-953e-b723649ea7db</uid>
+      <description>Scenarios that have been completely implemented.  They may or may not have been released to production.</description>
+      <parentUid>77e37562-0f29-4f8a-9190-e77da40cd0b0</parentUid>
+      <order_in_parent>8323072</order_in_parent>
+    </folder>
+    <folder>
+      <name>Current</name>
+      <uid>0aef3a5c-55e9-4513-8054-5cbc3923064d</uid>
+      <description>Each subfolder of "Current" represents a story being worked on in the current sprint.</description>
+      <parentUid>77e37562-0f29-4f8a-9190-e77da40cd0b0</parentUid>
+      <order_in_parent>8257536</order_in_parent>
+    </folder>
+    <folder>
+      <name>Backlog</name>
+      <uid>13abc29f-bde8-4431-ad57-9d6a80b2eddf</uid>
+      <description>Pointed stories (folders of scenarios) that have not been scheduled for implementation.  The order in this folder is the priority order.</description>
+      <parentUid>77e37562-0f29-4f8a-9190-e77da40cd0b0</parentUid>
+      <order_in_parent>8126464</order_in_parent>
+    </folder>
+    <folder>
+      <name>Pointing</name>
+      <uid>1fc1c70d-b1ee-4078-974c-bd00de789959</uid>
+      <description>Staging area for folders containing scenarios.  The folders are units of pointing, corresponding with PivotalTracker stories.</description>
+      <parentUid>77e37562-0f29-4f8a-9190-e77da40cd0b0</parentUid>
+      <order_in_parent>7864320</order_in_parent>
+    </folder>
+    <folder>
+      <name>Ideas</name>
+      <uid>317e9a0d-3c0f-4edf-8f15-eea07fbac3d6</uid>
+      <description>Conception of scenarios until they are ready to be pointed.  Scenarios may be "half-baked" or unstructured, and thus may lack steps.</description>
+      <parentUid>77e37562-0f29-4f8a-9190-e77da40cd0b0</parentUid>
+      <order_in_parent>-4194303</order_in_parent>
+    </folder>
+    <folder>
+      <name>Multitenancy</name>
+      <uid>d061ed34-b601-4b8a-9f65-e8752c21ffdb</uid>
+      <parentUid>317e9a0d-3c0f-4edf-8f15-eea07fbac3d6</parentUid>
+      <order_in_parent>0</order_in_parent>
+    </folder>
+    <folder>
+      <name>Thumbnail preview for resume upload</name>
+      <uid>ac36d4d6-1242-433e-9ce5-51f297e08095</uid>
+      <description>Note: preview for dragged/dropped resumes
+- https://unitive.slack.com/files/sam/F0J98SPGA/dashboard_upload.png
+- https://unitive.slack.com/files/sam/F0J9987GE/dashboard_with_resumes.png
+
+Functionality of buttons are described in story: https://www.pivotaltracker.com/story/show/111175096
+
+Background:
+Given I am a job owner/editor 
+And I am going to use unitive resume reviewer
+</description>
+      <tags>
+        <tag>
+          <key>current</key>
+        </tag>
+      </tags>
+      <parentUid>13abc29f-bde8-4431-ad57-9d6a80b2eddf</parentUid>
+      <order_in_parent>0</order_in_parent>
+    </folder>
+    <folder>
+      <name>Resume upload when Sovren fails</name>
+      <uid>2eb04795-0a80-4e7a-aa90-64d3f8425ef5</uid>
+      <description>- https://unitive.slack.com/files/sam/F0JSFPCAW/can_not_parse.png
+- https://unitive.slack.com/files/sam/F0JSJ2ZFS/applicant_already_exists.png
+- https://unitive.slack.com/files/sam/F0JSBM2BF/view_applicant.png
+- https://unitive.slack.com/files/sam/F0JS9ELQL/edit_applicant.png
+</description>
+      <tags>
+        <tag>
+          <key>current</key>
+        </tag>
+      </tags>
+      <parentUid>0aef3a5c-55e9-4513-8054-5cbc3923064d</parentUid>
+      <order_in_parent>4194304</order_in_parent>
+    </folder>
+    <folder>
+      <name>Resume upload</name>
+      <uid>eb18e120-23d4-4376-9c40-e93b97df7721</uid>
+      <description>Maintain add resume functionality we have now, but pare down to just 'add resume' field
+ Display sections parsed:
+- first name
+- last name
+- email
+- Experience
+- Skills
+- Education
+- Certifications
+- Referrals
+- Location
+as well as png version of pdf
+
+
+Text returns as read-only
+Store original file
+ Save and return to Job Dashboard
+ Applicant is created, "unitive resume" is created
+</description>
+      <tags>
+        <tag>
+          <key>current</key>
+        </tag>
+        <tag>
+          <key>started</key>
+        </tag>
+        <tag>
+          <key>points</key>
+          <value>13</value>
+        </tag>
+      </tags>
+      <parentUid>0aef3a5c-55e9-4513-8054-5cbc3923064d</parentUid>
+      <order_in_parent>0</order_in_parent>
+    </folder>
+    <folder>
+      <name>One more path for user nudge</name>
+      <uid>b301112c-0bcf-43e7-a211-5fe2fc6b2903</uid>
+      <description>*Note: while testing user nudge, Paige determined this additional path is important for the nudge flow*
+
+Background:
+Given I am user
+</description>
+      <tags>
+        <tag>
+          <key>done</key>
+        </tag>
+      </tags>
+      <parentUid>e948ff41-fd9d-4ac8-953e-b723649ea7db</parentUid>
+      <order_in_parent>0</order_in_parent>
+    </folder>
+    <folder>
+      <name>Job Descriptions</name>
+      <uid>b3f1e340-f206-457c-845e-4871441fd01d</uid>
+      <parentUid>c53c9107-10eb-445e-9bff-8ed608c12d81</parentUid>
+      <order_in_parent>-1048575</order_in_parent>
+    </folder>
+    <folder>
+      <name>Login</name>
+      <uid>1aab5101-3048-49da-a629-859dcfc44cc7</uid>
+      <parentUid>c53c9107-10eb-445e-9bff-8ed608c12d81</parentUid>
+      <order_in_parent>-4194303</order_in_parent>
+    </folder>
+    <folder>
+      <name>Account Management</name>
+      <uid>939283b5-356f-479f-aac5-5f6182f2d408</uid>
+      <parentUid>c53c9107-10eb-445e-9bff-8ed608c12d81</parentUid>
+      <order_in_parent>-2097151</order_in_parent>
+    </folder>
+    <folder>
+      <name>Settings</name>
+      <uid>b3cb62d5-1271-4854-90bd-7bf7efa56058</uid>
+      <parentUid>c53c9107-10eb-445e-9bff-8ed608c12d81</parentUid>
+      <order_in_parent>8355840</order_in_parent>
+    </folder>
+    <folder>
+      <name>Reports</name>
+      <uid>30849b7c-63f6-468b-9622-8aee04a6e704</uid>
+      <parentUid>c53c9107-10eb-445e-9bff-8ed608c12d81</parentUid>
+      <order_in_parent>8126464</order_in_parent>
+    </folder>
+    <folder>
+      <name>Resume Reviewer</name>
+      <uid>e9bb9868-c58f-4f96-a25c-151445e81c6c</uid>
+      <parentUid>c53c9107-10eb-445e-9bff-8ed608c12d81</parentUid>
+      <order_in_parent>6291456</order_in_parent>
+    </folder>
+    <folder>
+      <name>Interviews</name>
+      <uid>c4d995f5-eb33-4625-8c92-4bf4c07f405b</uid>
+      <parentUid>c53c9107-10eb-445e-9bff-8ed608c12d81</parentUid>
+      <order_in_parent>4194304</order_in_parent>
+    </folder>
+    <folder>
+      <name>Requisitions</name>
+      <uid>61a47da3-da34-406c-b78f-e566ecb802f8</uid>
+      <parentUid>c53c9107-10eb-445e-9bff-8ed608c12d81</parentUid>
+      <order_in_parent>0</order_in_parent>
+    </folder>
+    <folder>
+      <name>Requisition Settings</name>
+      <uid>d36a1878-e5e5-4e36-896d-95e9166836fd</uid>
+      <parentUid>61a47da3-da34-406c-b78f-e566ecb802f8</parentUid>
+      <order_in_parent>262145</order_in_parent>
+    </folder>
+    <folder>
+      <name>Requisition View</name>
+      <uid>c42d3ac5-f772-427c-8fbd-ff6e853868ea</uid>
+      <parentUid>61a47da3-da34-406c-b78f-e566ecb802f8</parentUid>
+      <order_in_parent>-5242879</order_in_parent>
+    </folder>
+    <folder>
+      <name>Edit Requisition</name>
+      <uid>58fbf4e0-c0c5-4e24-86d6-04be987b39ea</uid>
+      <parentUid>61a47da3-da34-406c-b78f-e566ecb802f8</parentUid>
+      <order_in_parent>-2097151</order_in_parent>
+    </folder>
+    <folder>
+      <name>Requisition List</name>
+      <uid>68ca91bf-a50a-4059-b99d-a70280c101f8</uid>
+      <parentUid>61a47da3-da34-406c-b78f-e566ecb802f8</parentUid>
+      <order_in_parent>-6291455</order_in_parent>
+    </folder>
+    <folder>
+      <name>New Requisition Flow</name>
+      <uid>ba281344-9594-4a75-a1aa-9f070351d555</uid>
+      <parentUid>61a47da3-da34-406c-b78f-e566ecb802f8</parentUid>
+      <order_in_parent>-4194303</order_in_parent>
+    </folder>
+    <folder>
+      <name>Requisition Search Bar</name>
+      <uid>5aed75c4-29d9-4a79-8f2d-fd51c6fdd575</uid>
+      <parentUid>61a47da3-da34-406c-b78f-e566ecb802f8</parentUid>
+      <order_in_parent>-7340031</order_in_parent>
+    </folder>
+    <folder>
+      <name>Create Applicant</name>
+      <uid>95ab9c42-9d80-43ac-950c-72503619f102</uid>
+      <parentUid>61a47da3-da34-406c-b78f-e566ecb802f8</parentUid>
+      <order_in_parent>6291456</order_in_parent>
+    </folder>
+    <folder>
+      <name>Requisition List for Copying</name>
+      <uid>af8287b9-f117-4c96-b19f-614db58c0e92</uid>
+      <parentUid>61a47da3-da34-406c-b78f-e566ecb802f8</parentUid>
+      <order_in_parent>-524287</order_in_parent>
+    </folder>
+    <folder>
+      <name>Add Applicants</name>
+      <uid>2eb49a5f-1eff-4cf0-9103-0b2d0b30fd47</uid>
+      <parentUid>61a47da3-da34-406c-b78f-e566ecb802f8</parentUid>
+      <order_in_parent>1048577</order_in_parent>
+    </folder>
+    <folder>
+      <name>RequisitionCopyCtrl</name>
+      <uid>360dc29b-9f04-4677-9ee6-25c7e0354bb0</uid>
+      <tags>
+        <tag>
+          <key>client-unit</key>
+        </tag>
+      </tags>
+      <parentUid>af8287b9-f117-4c96-b19f-614db58c0e92</parentUid>
+      <order_in_parent>0</order_in_parent>
+    </folder>
+    <folder>
+      <name>scope functions</name>
+      <uid>6dcaea42-7669-41e3-a0c6-b7d3f02076d1</uid>
+      <parentUid>360dc29b-9f04-4677-9ee6-25c7e0354bb0</parentUid>
+      <order_in_parent>0</order_in_parent>
+    </folder>
+    <folder>
+      <name>useJobDescription()</name>
+      <uid>80bc4196-5c97-493b-a951-662dd5af28fd</uid>
+      <tags>
+        <tag>
+          <key>client-unit</key>
+        </tag>
+      </tags>
+      <parentUid>6dcaea42-7669-41e3-a0c6-b7d3f02076d1</parentUid>
+      <order_in_parent>4194304</order_in_parent>
+    </folder>
+    <folder>
+      <name>showJobDescription()</name>
+      <uid>d9ec5f97-2413-4924-b729-0120c08cf22e</uid>
+      <tags>
+        <tag>
+          <key>client-unit</key>
+        </tag>
+      </tags>
+      <parentUid>6dcaea42-7669-41e3-a0c6-b7d3f02076d1</parentUid>
+      <order_in_parent>0</order_in_parent>
+    </folder>
+  </testPlan>
+  <scenarios>
+    <scenario>
+      <name>Competency Focus Reminder</name>
+      <uid>3cd6bc82-b606-47f7-9091-a988e17deed2</uid>
+      <folderUid>1fc1c70d-b1ee-4078-974c-bd00de789959</folderUid>
+      <order_in_parent>0</order_in_parent>
+      <description>*note: bringing back this feature from the prototype based on researchers' suggestion to disrupt interviewers' tendency to focus on culture fit and like-ability with a reminder to fact-find just on the competencies they were assigned*
+
+https://unitive.slack.com/files/sam/F0JV7R6AD/interview_reminder_modal.png
+</description>
+      <steps>
+        <call>
+          <actionword>I am an interviewer</actionword>
+          <annotation>given</annotation>
+        </call>
+        <call>
+          <actionword>I am on the prep page</actionword>
+          <annotation>and</annotation>
+        </call>
+        <call>
+          <actionword>I click "button"</actionword>
+          <annotation>when</annotation>
+          <arguments>
+            <argument>
+              <name>button</name>
+              <value>
+                <template>
+                  <stringliteral>Start interview</stringliteral>
+                </template>
+              </value>
+            </argument>
+          </arguments>
+        </call>
+        <call>
+          <actionword>a modal appears</actionword>
+          <annotation>then</annotation>
+        </call>
+        <call>
+          <actionword>it says "message"</actionword>
+          <annotation>and</annotation>
+          <arguments>
+            <argument>
+              <name>message</name>
+              <value>
+                <template>
+                  <stringliteral>Focus on assessing the candidate's:</stringliteral>
+                </template>
+              </value>
+            </argument>
+          </arguments>
+        </call>
+        <call>
+          <actionword>the ... lists the competencies that interviewer was assigned in order of importance</actionword>
+          <annotation>and</annotation>
+        </call>
+        <call>
+          <actionword>interviewer clicks "button" to close the pop up</actionword>
+          <annotation>and</annotation>
+          <arguments>
+            <argument>
+              <name>button</name>
+              <value>
+                <template>
+                  <stringliteral>okay</stringliteral>
+                </template>
+              </value>
+            </argument>
+          </arguments>
+        </call>
+      </steps>
+    </scenario>
+    <scenario>
+      <name>Form to upload resume for sovren-parsing</name>
+      <uid>8da735cf-1798-4cc7-85e6-70fafa99d5b9</uid>
+      <folderUid>eb18e120-23d4-4376-9c40-e93b97df7721</folderUid>
+      <order_in_parent>0</order_in_parent>
+      <steps>
+        <call>
+          <actionword>I click "button"</actionword>
+          <annotation>when</annotation>
+          <arguments>
+            <argument>
+              <name>button</name>
+              <value>
+                <template>
+                  <stringliteral>Add resume</stringliteral>
+                </template>
+              </value>
+            </argument>
+          </arguments>
+        </call>
+        <call>
+          <actionword>I arrive to "page" page</actionword>
+          <annotation>then</annotation>
+          <arguments>
+            <argument>
+              <name>page</name>
+              <value>
+                <template>
+                  <stringliteral>Add resume</stringliteral>
+                </template>
+              </value>
+            </argument>
+          </arguments>
+        </call>
+        <call>
+          <actionword>I see the field "field" with button "button"</actionword>
+          <annotation>and</annotation>
+          <arguments>
+            <argument>
+              <name>field</name>
+              <value>
+                <template>
+                  <stringliteral>Resume file (PDF only)</stringliteral>
+                </template>
+              </value>
+            </argument>
+            <argument>
+              <name>button</name>
+              <value>
+                <template>
+                  <stringliteral>Choose PDF</stringliteral>
+                </template>
+              </value>
+            </argument>
+          </arguments>
+        </call>
+      </steps>
+    </scenario>
+    <scenario>
+      <name>Save uploaded resume</name>
+      <uid>55de5cb9-d631-4d4d-8a45-fbf03c94bea3</uid>
+      <folderUid>eb18e120-23d4-4376-9c40-e93b97df7721</folderUid>
+      <order_in_parent>4194304</order_in_parent>
+      <description>Here is some additional information.</description>
+      <steps>
+        <call>
+          <actionword>I click "button" on the resume pdf file</actionword>
+          <annotation>when</annotation>
+          <arguments>
+            <argument>
+              <name>button</name>
+              <value>
+                <template>
+                  <stringliteral>select</stringliteral>
+                </template>
+              </value>
+            </argument>
+          </arguments>
+        </call>
+        <call>
+          <actionword>the window closes</actionword>
+          <annotation>then</annotation>
+        </call>
+        <call>
+          <actionword>a progress bar loads to 100%</actionword>
+          <annotation>and</annotation>
+        </call>
+        <call>
+          <actionword>I get a "message" message</actionword>
+          <annotation>then</annotation>
+          <arguments>
+            <argument>
+              <name>message</name>
+              <value>
+                <template>
+                  <stringliteral>save success</stringliteral>
+                </template>
+              </value>
+            </argument>
+          </arguments>
+        </call>
+      </steps>
+    </scenario>
+    <scenario>
+      <name>Sovren fails</name>
+      <uid>bd5edac3-4413-41a1-9b29-821906803301</uid>
+      <folderUid>2eb04795-0a80-4e7a-aa90-64d3f8425ef5</folderUid>
+      <order_in_parent>0</order_in_parent>
+      <steps>
+        <call>
+          <actionword>I am a user who is adding resumes</actionword>
+          <annotation>given</annotation>
+        </call>
+        <call>
+          <actionword>user drags and drops resume in field</actionword>
+          <annotation>when</annotation>
+        </call>
+        <call>
+          <actionword>Sovren fails</actionword>
+          <annotation>and</annotation>
+        </call>
+        <call>
+          <actionword>user is notified that no data was detected in the PDF</actionword>
+          <annotation>then</annotation>
+        </call>
+        <call>
+          <actionword>is prompted for applicant first name, last name, email</actionword>
+          <annotation>and</annotation>
+        </call>
+        <call>
+          <actionword>if they want to manually enter the rest of the info</actionword>
+          <annotation>and</annotation>
+        </call>
+      </steps>
+    </scenario>
+    <scenario>
+      <name>User came back with no data</name>
+      <uid>0c97bde8-0866-47f0-b249-2038b00d6d70</uid>
+      <folderUid>2eb04795-0a80-4e7a-aa90-64d3f8425ef5</folderUid>
+      <order_in_parent>4194304</order_in_parent>
+      <steps>
+        <call>
+          <actionword>I am a user who is adding resumes</actionword>
+          <annotation>given</annotation>
+        </call>
+        <call>
+          <actionword>user drags and drops resume in field</actionword>
+          <annotation>when</annotation>
+        </call>
+        <call>
+          <actionword>Sovren cannot parse the resume</actionword>
+          <annotation>and</annotation>
+        </call>
+        <call>
+          <actionword>user is notified that no data was detected in the PDF</actionword>
+          <annotation>then</annotation>
+        </call>
+        <call>
+          <actionword>is prompted for applicant first name, last name, email</actionword>
+          <annotation>and</annotation>
+        </call>
+        <call>
+          <actionword>if they want to manually enter the rest of the info</actionword>
+          <annotation>and</annotation>
+        </call>
+      </steps>
+    </scenario>
+    <scenario>
+      <name>PNG creation fails</name>
+      <uid>57a6eb19-dc13-4706-91c7-0fe74eeaec30</uid>
+      <folderUid>2eb04795-0a80-4e7a-aa90-64d3f8425ef5</folderUid>
+      <order_in_parent>6291456</order_in_parent>
+      <steps>
+        <call>
+          <actionword>I am a user who is adding resumes</actionword>
+          <annotation>given</annotation>
+        </call>
+        <call>
+          <actionword>user drags and drops resume in field</actionword>
+          <annotation>when</annotation>
+        </call>
+        <call>
+          <actionword>PNG creation fails</actionword>
+          <annotation>and</annotation>
+        </call>
+        <call>
+          <actionword>default icon of PDF displays</actionword>
+          <annotation>then</annotation>
+        </call>
+      </steps>
+    </scenario>
+    <scenario>
+      <name>Resume's email already exists on that job</name>
+      <uid>8344583c-52f8-441b-bf30-c0edd6962c18</uid>
+      <folderUid>2eb04795-0a80-4e7a-aa90-64d3f8425ef5</folderUid>
+      <order_in_parent>7340032</order_in_parent>
+      <steps>
+        <call>
+          <actionword>I am a user who is adding resumes</actionword>
+          <annotation>given</annotation>
+        </call>
+        <call>
+          <actionword>user clicks 'save' on parsed resume</actionword>
+          <annotation>when</annotation>
+        </call>
+        <call>
+          <actionword>that email already has a resume in the system on that job</actionword>
+          <annotation>and</annotation>
+        </call>
+        <call>
+          <actionword>user is notified that this person already has a resume for this job - do you want to use that one? or the new one?</actionword>
+          <annotation>then</annotation>
+        </call>
+        <call>
+          <actionword>I click 'yes, replace'</actionword>
+          <annotation>when</annotation>
+        </call>
+        <call>
+          <actionword>the back end keeps the original</actionword>
+          <annotation>and</annotation>
+        </call>
+      </steps>
+    </scenario>
+    <scenario>
+      <name>Thumbnail preview of dragged/dropped resume</name>
+      <uid>f404d3f2-b79f-4cd3-b452-30e6c3eea87c</uid>
+      <folderUid>ac36d4d6-1242-433e-9ce5-51f297e08095</folderUid>
+      <order_in_parent>0</order_in_parent>
+      <steps>
+        <call>
+          <actionword>I am a job owner/editor, and I am going to use unitive resume reviewer</actionword>
+          <annotation>given</annotation>
+        </call>
+        <call>
+          <actionword>user drags and drops resume in field</actionword>
+          <annotation>when</annotation>
+        </call>
+        <call>
+          <actionword>a thumbnail preview shows of the resume in the field</actionword>
+          <annotation>then</annotation>
+        </call>
+      </steps>
+    </scenario>
+    <scenario>
+      <name>Add applicant button</name>
+      <uid>a0ddadce-e51c-40b2-8ba0-e02517fec52d</uid>
+      <folderUid>b301112c-0bcf-43e7-a211-5fe2fc6b2903</folderUid>
+      <order_in_parent>0</order_in_parent>
+      <tags>
+        <tag>
+          <key>done</key>
+        </tag>
+      </tags>
+      <steps>
+        <call>
+          <actionword>I am user</actionword>
+          <annotation>given</annotation>
+        </call>
+        <call>
+          <actionword>I have saved at least one interview question to one interviewer on 'build interview' page or at least one resume reviewed</actionword>
+          <annotation>given</annotation>
+        </call>
+        <call>
+          <actionword>Job has 0 applicants approved for interview</actionword>
+          <annotation>and</annotation>
+        </call>
+        <call>
+          <actionword>I click "button"</actionword>
+          <annotation>when</annotation>
+          <arguments>
+            <argument>
+              <name>button</name>
+              <value>
+                <template>
+                  <stringliteral>back to job dashboard</stringliteral>
+                </template>
+              </value>
+            </argument>
+          </arguments>
+        </call>
+        <call>
+          <actionword>"p1" button is blue and not wiggle</actionword>
+          <annotation>and</annotation>
+          <arguments>
+            <argument>
+              <name>p1</name>
+              <value>
+                <template>
+                  <stringliteral>add applicants</stringliteral>
+                </template>
+              </value>
+            </argument>
+          </arguments>
+        </call>
+      </steps>
+    </scenario>
+    <scenario>
+      <name>It's time for me to add applicant's resumes</name>
+      <uid>395e6e66-c8f7-41a0-ad6e-3df32ab2f530</uid>
+      <folderUid>b301112c-0bcf-43e7-a211-5fe2fc6b2903</folderUid>
+      <order_in_parent>4194304</order_in_parent>
+      <tags>
+        <tag>
+          <key>done</key>
+        </tag>
+      </tags>
+      <steps>
+        <call>
+          <actionword>I am user</actionword>
+          <annotation>given</annotation>
+        </call>
+        <call>
+          <actionword>I'm on the "p1" page</actionword>
+          <annotation>when</annotation>
+          <arguments>
+            <argument>
+              <name>p1</name>
+              <value>
+                <template>
+                  <stringliteral>JOB DASHBOARD</stringliteral>
+                </template>
+              </value>
+            </argument>
+          </arguments>
+        </call>
+        <call>
+          <actionword>Job is created</actionword>
+          <annotation>and</annotation>
+        </call>
+        <call>
+          <actionword>0 resumes added</actionword>
+          <annotation>and</annotation>
+        </call>
+        <call>
+          <actionword>0 applicants approved for interview</actionword>
+          <annotation>and</annotation>
+        </call>
+        <call>
+          <actionword>there are no question-interviewers saved</actionword>
+          <annotation>and</annotation>
+        </call>
+        <call>
+          <actionword>"p1" should be primary button and wiggle</actionword>
+          <annotation>then</annotation>
+          <arguments>
+            <argument>
+              <name>p1</name>
+              <value>
+                <template>
+                  <stringliteral>add resume</stringliteral>
+                </template>
+              </value>
+            </argument>
+          </arguments>
+        </call>
+      </steps>
+    </scenario>
+    <scenario>
+      <name>It's time for me to review resumes</name>
+      <uid>7cdd7b03-8cb8-4635-a998-514af90bcb10</uid>
+      <folderUid>b301112c-0bcf-43e7-a211-5fe2fc6b2903</folderUid>
+      <order_in_parent>6291456</order_in_parent>
+      <tags>
+        <tag>
+          <key>done</key>
+        </tag>
+      </tags>
+      <steps>
+        <call>
+          <actionword>I am user</actionword>
+          <annotation>given</annotation>
+        </call>
+        <call>
+          <actionword>I'm on the "p1" page</actionword>
+          <annotation>when</annotation>
+          <arguments>
+            <argument>
+              <name>p1</name>
+              <value>
+                <template>
+                  <stringliteral>Job Dashboard</stringliteral>
+                </template>
+              </value>
+            </argument>
+          </arguments>
+        </call>
+        <call>
+          <actionword>job has 2 or more resumes added</actionword>
+          <annotation>and</annotation>
+        </call>
+        <call>
+          <actionword>0 reviewed</actionword>
+          <annotation>and</annotation>
+        </call>
+        <call>
+          <actionword>0 applicants approved for interview</actionword>
+          <annotation>and</annotation>
+        </call>
+        <call>
+          <actionword>there are no question-interviewers saved</actionword>
+          <annotation>and</annotation>
+        </call>
+        <call>
+          <actionword>"p1" should be primary button and wiggle</actionword>
+          <annotation>then</annotation>
+          <arguments>
+            <argument>
+              <name>p1</name>
+              <value>
+                <template>
+                  <stringliteral>review resume</stringliteral>
+                </template>
+              </value>
+            </argument>
+          </arguments>
+        </call>
+      </steps>
+    </scenario>
+    <scenario>
+      <name>Schedule wiggle</name>
+      <uid>7580a7f0-4b70-459e-9e30-081f1f3a9a6f</uid>
+      <folderUid>b301112c-0bcf-43e7-a211-5fe2fc6b2903</folderUid>
+      <order_in_parent>7340032</order_in_parent>
+      <tags>
+        <tag>
+          <key>done</key>
+        </tag>
+      </tags>
+      <steps>
+        <call>
+          <actionword>I am user</actionword>
+          <annotation>given</annotation>
+        </call>
+        <call>
+          <actionword>I have added any applicants </actionword>
+          <annotation>given</annotation>
+        </call>
+        <call>
+          <actionword>at least one interview question is saved (regardless of whether i've added or reviewed resumes)</actionword>
+          <annotation>and</annotation>
+        </call>
+        <call>
+          <actionword>I click "button"</actionword>
+          <annotation>when</annotation>
+          <arguments>
+            <argument>
+              <name>button</name>
+              <value>
+                <template>
+                  <stringliteral>back to job dashboard</stringliteral>
+                </template>
+              </value>
+            </argument>
+          </arguments>
+        </call>
+        <call>
+          <actionword>there is not already a scheduled interview </actionword>
+          <annotation>and</annotation>
+        </call>
+        <call>
+          <actionword>"p1" button is blue and NOT wiggle</actionword>
+          <annotation>then</annotation>
+          <arguments>
+            <argument>
+              <name>p1</name>
+              <value>
+                <template>
+                  <stringliteral>Schedule</stringliteral>
+                </template>
+              </value>
+            </argument>
+          </arguments>
+        </call>
+      </steps>
+    </scenario>
+    <scenario>
+      <name>Test for JIRA integration</name>
+      <uid>5607e0a3-f6ed-4be1-be4d-18a032ef6892</uid>
+      <folderUid>eb18e120-23d4-4376-9c40-e93b97df7721</folderUid>
+      <order_in_parent>6291456</order_in_parent>
+      <description>This is for JIRA PT-8.
+</description>
+      <tags>
+        <tag>
+          <key>JIRA</key>
+          <value>PT-8</value>
+        </tag>
+      </tags>
+    </scenario>
+    <scenario>
+      <name>It's time for me to review resumes copy</name>
+      <uid>cd93550d-6732-4396-b912-040a6eb9061d</uid>
+      <folderUid>317e9a0d-3c0f-4edf-8f15-eea07fbac3d6</folderUid>
+      <order_in_parent>0</order_in_parent>
+      <steps>
+        <call>
+          <actionword>I am user</actionword>
+          <annotation>given</annotation>
+        </call>
+        <call>
+          <actionword>I'm on the "p1" page</actionword>
+          <annotation>when</annotation>
+          <arguments>
+            <argument>
+              <name>p1</name>
+              <value>
+                <template>
+                  <stringliteral>Job Dashboard</stringliteral>
+                </template>
+              </value>
+            </argument>
+          </arguments>
+        </call>
+        <call>
+          <actionword>job has 2 or more resumes added</actionword>
+          <annotation>and</annotation>
+        </call>
+        <call>
+          <actionword>0 reviewed</actionword>
+          <annotation>and</annotation>
+        </call>
+        <call>
+          <actionword>0 applicants approved for interview</actionword>
+          <annotation>and</annotation>
+        </call>
+        <call>
+          <actionword>there are no question-interviewers saved</actionword>
+          <annotation>and</annotation>
+        </call>
+        <call>
+          <actionword>"p1" should be primary button and wiggle</actionword>
+          <annotation>then</annotation>
+          <arguments>
+            <argument>
+              <name>p1</name>
+              <value>
+                <template>
+                  <stringliteral>review resume</stringliteral>
+                </template>
+              </value>
+            </argument>
+          </arguments>
+        </call>
+      </steps>
+    </scenario>
+    <scenario>
+      <name>It should show the search bar</name>
+      <uid>26845f51-8a0b-42dc-a246-f3551909b3b0</uid>
+      <folderUid>af8287b9-f117-4c96-b19f-614db58c0e92</folderUid>
+      <order_in_parent>0</order_in_parent>
+      <tags>
+        <tag>
+          <key>e2e</key>
+        </tag>
+      </tags>
+      <steps>
+        <call>
+          <actionword>I'm on the Job Copy page</actionword>
+          <annotation>given</annotation>
+        </call>
+        <call>
+          <actionword>it should show the search bar</actionword>
+          <annotation>then</annotation>
+        </call>
+      </steps>
+    </scenario>
+    <scenario>
+      <name>It should show the list of available reqs and the extra data with it</name>
+      <uid>93c25f51-8073-4023-9209-5bd3ba7bd48a</uid>
+      <folderUid>af8287b9-f117-4c96-b19f-614db58c0e92</folderUid>
+      <order_in_parent>4194304</order_in_parent>
+      <tags>
+        <tag>
+          <key>e2e</key>
+        </tag>
+      </tags>
+      <steps>
+        <call>
+          <actionword>I'm on the Job Copy page</actionword>
+          <annotation>given</annotation>
+        </call>
+        <call>
+          <actionword>it should show the list of available reqs and the extra data with it</actionword>
+          <annotation>then</annotation>
+        </call>
+      </steps>
+    </scenario>
+    <scenario>
+      <name>It should show a no-data message when there are no reqs available to the user</name>
+      <uid>cfcc0084-e53e-40f7-ba5c-3c1446f65826</uid>
+      <folderUid>af8287b9-f117-4c96-b19f-614db58c0e92</folderUid>
+      <order_in_parent>6291456</order_in_parent>
+      <tags>
+        <tag>
+          <key>e2e</key>
+        </tag>
+      </tags>
+      <steps>
+        <call>
+          <actionword>I'm on the Job Copy page</actionword>
+          <annotation>given</annotation>
+        </call>
+        <call>
+          <actionword>it should show a no-data message when there are no reqs available to the user</actionword>
+          <annotation>then</annotation>
+        </call>
+      </steps>
+    </scenario>
+    <scenario>
+      <name>It should show a no-data message when there are no reqs after searching/filtering</name>
+      <uid>bfba6c4f-72a3-4ee9-9c39-2e67f6ead50b</uid>
+      <folderUid>af8287b9-f117-4c96-b19f-614db58c0e92</folderUid>
+      <order_in_parent>7340032</order_in_parent>
+      <tags>
+        <tag>
+          <key>e2e</key>
+        </tag>
+      </tags>
+      <steps>
+        <call>
+          <actionword>I'm on the Job Copy page</actionword>
+          <annotation>given</annotation>
+        </call>
+        <call>
+          <actionword>it should show a no-data message when there are no reqs after searching/filtering</actionword>
+          <annotation>then</annotation>
+        </call>
+      </steps>
+    </scenario>
+    <scenario>
+      <name>It should show the job description when clicking the "Preview" button</name>
+      <uid>2423433d-c5ef-442e-b719-7b5025fc33f1</uid>
+      <folderUid>af8287b9-f117-4c96-b19f-614db58c0e92</folderUid>
+      <order_in_parent>7864320</order_in_parent>
+      <tags>
+        <tag>
+          <key>e2e</key>
+        </tag>
+      </tags>
+      <steps>
+        <call>
+          <actionword>I'm on the Job Copy page</actionword>
+          <annotation>given</annotation>
+        </call>
+        <call>
+          <actionword>it should show the job description when clicking the "p1" button</actionword>
+          <annotation>then</annotation>
+          <arguments>
+            <argument>
+              <name>p1</name>
+              <value>
+                <template>
+                  <stringliteral>Preview</stringliteral>
+                </template>
+              </value>
+            </argument>
+          </arguments>
+        </call>
+      </steps>
+    </scenario>
+    <scenario>
+      <name>It should create a copy of the req and job description when clicking the "Replicate" button</name>
+      <uid>d80810ad-b3fb-4610-ba94-ee75b2426fbd</uid>
+      <folderUid>af8287b9-f117-4c96-b19f-614db58c0e92</folderUid>
+      <order_in_parent>8126464</order_in_parent>
+      <tags>
+        <tag>
+          <key>e2e</key>
+        </tag>
+      </tags>
+      <steps>
+        <call>
+          <actionword>I'm on the Job Copy page</actionword>
+          <annotation>given</annotation>
+        </call>
+        <call>
+          <actionword>it should create a copy of the req and job description when clicking the "p1" button</actionword>
+          <annotation>then</annotation>
+          <arguments>
+            <argument>
+              <name>p1</name>
+              <value>
+                <template>
+                  <stringliteral>Replicate</stringliteral>
+                </template>
+              </value>
+            </argument>
+          </arguments>
+        </call>
+      </steps>
+    </scenario>
+    <scenario>
+      <name>It should show ten reqs and a show more link</name>
+      <uid>c9101e7c-f740-4c52-84a0-d24088c189ad</uid>
+      <folderUid>af8287b9-f117-4c96-b19f-614db58c0e92</folderUid>
+      <order_in_parent>8257536</order_in_parent>
+      <tags>
+        <tag>
+          <key>e2e</key>
+        </tag>
+      </tags>
+      <steps>
+        <call>
+          <actionword>I'm on the Job Copy page</actionword>
+          <annotation>given</annotation>
+        </call>
+        <call>
+          <actionword>it should show ten reqs and a show more link</actionword>
+          <annotation>then</annotation>
+        </call>
+      </steps>
+    </scenario>
+    <scenario>
+      <name>It should show a job description popup</name>
+      <uid>2c29b611-288c-46cd-85f5-12eb164486f8</uid>
+      <folderUid>d9ec5f97-2413-4924-b729-0120c08cf22e</folderUid>
+      <order_in_parent>0</order_in_parent>
+      <tags>
+        <tag>
+          <key>client-unit</key>
+        </tag>
+      </tags>
+      <steps>
+        <call>
+          <actionword>the setup for RequisitionCopyCtrl</actionword>
+          <annotation>given</annotation>
+        </call>
+        <call>
+          <actionword>it should show a job description popup</actionword>
+          <annotation>then</annotation>
+        </call>
+      </steps>
+    </scenario>
+    <scenario>
+      <name>It should request to copy the given req and navigate to the requisition edit page</name>
+      <uid>f3030898-d9ba-43a5-a8bc-5d268c66c338</uid>
+      <folderUid>80bc4196-5c97-493b-a951-662dd5af28fd</folderUid>
+      <order_in_parent>0</order_in_parent>
+      <tags>
+        <tag>
+          <key>client-unit</key>
+        </tag>
+      </tags>
+      <steps>
+        <call>
+          <actionword>the setup for RequisitionCopyCtrl</actionword>
+          <annotation>given</annotation>
+        </call>
+        <call>
+          <actionword>it should request to copy the given req and navigate to the requisition edit page</actionword>
+          <annotation>then</annotation>
+        </call>
+      </steps>
+    </scenario>
+    <scenario>
+      <name>It should show an error if it fails</name>
+      <uid>b813c7e5-cc11-4d78-9ea7-bcd74c5fe214</uid>
+      <folderUid>80bc4196-5c97-493b-a951-662dd5af28fd</folderUid>
+      <order_in_parent>4194304</order_in_parent>
+      <tags>
+        <tag>
+          <key>client-unit</key>
+        </tag>
+      </tags>
+      <steps>
+        <call>
+          <actionword>the setup for RequisitionCopyCtrl</actionword>
+          <annotation>given</annotation>
+        </call>
+        <call>
+          <actionword>it should show an error if it fails</actionword>
+          <annotation>then</annotation>
+        </call>
+      </steps>
+    </scenario>
+  </scenarios>
+  <actionwords>
+    <actionword>
+      <name>I am an interviewer</name>
+      <uid>c8b84b28-37ca-4c88-98af-012909a973b1</uid>
+      <callers>
+        <uid>3cd6bc82-b606-47f7-9091-a988e17deed2</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>I am on the prep page</name>
+      <uid>1bb9f055-0a3e-4c42-bedf-f101a0ff2330</uid>
+      <callers>
+        <uid>3cd6bc82-b606-47f7-9091-a988e17deed2</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>I click "button"</name>
+      <uid>48f3f849-742a-41af-94b1-e28ace0b3d3a</uid>
+      <parameters>
+        <parameter>
+          <name>button</name>
+        </parameter>
+      </parameters>
+      <callers>
+        <uid>7580a7f0-4b70-459e-9e30-081f1f3a9a6f</uid>
+        <uid>8da735cf-1798-4cc7-85e6-70fafa99d5b9</uid>
+        <uid>3cd6bc82-b606-47f7-9091-a988e17deed2</uid>
+        <uid>a0ddadce-e51c-40b2-8ba0-e02517fec52d</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>a modal appears</name>
+      <uid>ccfaa773-1d88-4afd-97fb-cc114be73445</uid>
+      <callers>
+        <uid>3cd6bc82-b606-47f7-9091-a988e17deed2</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>it says "message"</name>
+      <uid>95705cd2-ff4c-493c-a075-4994170c1a5b</uid>
+      <parameters>
+        <parameter>
+          <name>message</name>
+        </parameter>
+      </parameters>
+      <callers>
+        <uid>3cd6bc82-b606-47f7-9091-a988e17deed2</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>the "p1" lists the competencies</name>
+      <uid>66199bad-5e31-4974-8ffd-2d1d94327690</uid>
+      <parameters>
+        <parameter>
+          <name>p1</name>
+        </parameter>
+      </parameters>
+    </actionword>
+    <actionword>
+      <name>the ... lists the competencies that interviewer was assigned in order of importance</name>
+      <uid>0863bbdf-9828-4510-b1f9-3ce4604c00b9</uid>
+      <callers>
+        <uid>3cd6bc82-b606-47f7-9091-a988e17deed2</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>interviewer clicks "button" to close the pop up</name>
+      <uid>901caabf-37b7-47ee-bd0d-2d7856ff2e1b</uid>
+      <parameters>
+        <parameter>
+          <name>button</name>
+        </parameter>
+      </parameters>
+      <callers>
+        <uid>3cd6bc82-b606-47f7-9091-a988e17deed2</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>I arrive to "page" page</name>
+      <uid>5e3d1b15-0783-4f71-af58-683e64ee0474</uid>
+      <parameters>
+        <parameter>
+          <name>page</name>
+        </parameter>
+      </parameters>
+      <callers>
+        <uid>8da735cf-1798-4cc7-85e6-70fafa99d5b9</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>I see the field "field" with button "button"</name>
+      <uid>789a4242-0ef0-4b64-8b62-641f3d35ec28</uid>
+      <parameters>
+        <parameter>
+          <name>field</name>
+        </parameter>
+        <parameter>
+          <name>button</name>
+        </parameter>
+      </parameters>
+      <callers>
+        <uid>8da735cf-1798-4cc7-85e6-70fafa99d5b9</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>I click "button" on the resume pdf file</name>
+      <uid>94057f74-7f73-404c-a477-5519b7c01669</uid>
+      <parameters>
+        <parameter>
+          <name>button</name>
+        </parameter>
+      </parameters>
+      <callers>
+        <uid>55de5cb9-d631-4d4d-8a45-fbf03c94bea3</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>the window closes</name>
+      <uid>dc8f6a19-eb06-4bc0-887a-f40a164849cf</uid>
+      <callers>
+        <uid>55de5cb9-d631-4d4d-8a45-fbf03c94bea3</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>a progress bar loads to 100%</name>
+      <uid>a49d0bcd-fccf-4ebb-967d-e2fd1d3139c1</uid>
+      <callers>
+        <uid>55de5cb9-d631-4d4d-8a45-fbf03c94bea3</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>I get a "message" message</name>
+      <uid>4c802c98-c97d-4fc9-88f6-69fc741920c2</uid>
+      <parameters>
+        <parameter>
+          <name>message</name>
+        </parameter>
+      </parameters>
+      <callers>
+        <uid>55de5cb9-d631-4d4d-8a45-fbf03c94bea3</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>I return to "page"</name>
+      <uid>7c10aa91-49cb-45ed-ae55-cd0885755ca7</uid>
+      <parameters>
+        <parameter>
+          <name>page</name>
+        </parameter>
+      </parameters>
+    </actionword>
+    <actionword>
+      <name>I am a user who is adding resumes</name>
+      <uid>6f4ebe7b-c096-49d1-9ffd-95f4e90d96b8</uid>
+      <callers>
+        <uid>8344583c-52f8-441b-bf30-c0edd6962c18</uid>
+        <uid>57a6eb19-dc13-4706-91c7-0fe74eeaec30</uid>
+        <uid>0c97bde8-0866-47f0-b249-2038b00d6d70</uid>
+        <uid>bd5edac3-4413-41a1-9b29-821906803301</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>user drags and drops resume in field</name>
+      <uid>9f9b5b19-3d80-4074-9149-fc9d1c86acb3</uid>
+      <callers>
+        <uid>f404d3f2-b79f-4cd3-b452-30e6c3eea87c</uid>
+        <uid>57a6eb19-dc13-4706-91c7-0fe74eeaec30</uid>
+        <uid>0c97bde8-0866-47f0-b249-2038b00d6d70</uid>
+        <uid>bd5edac3-4413-41a1-9b29-821906803301</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>Sovren fails</name>
+      <uid>0a35c48c-eccf-4c6d-ae54-38e4f5f77df0</uid>
+      <callers>
+        <uid>bd5edac3-4413-41a1-9b29-821906803301</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>user is notified that no data was detected in the PDF</name>
+      <uid>b2e5c519-d873-4e4c-94d1-0a228aa516dc</uid>
+      <callers>
+        <uid>0c97bde8-0866-47f0-b249-2038b00d6d70</uid>
+        <uid>bd5edac3-4413-41a1-9b29-821906803301</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>is prompted for applicant first name, last name, email</name>
+      <uid>7f9d4fad-b4f9-4569-8eb7-0535d3c5a7e6</uid>
+      <callers>
+        <uid>0c97bde8-0866-47f0-b249-2038b00d6d70</uid>
+        <uid>bd5edac3-4413-41a1-9b29-821906803301</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>if they want to manually enter the rest of the info</name>
+      <uid>7765a53b-a4e6-425a-9d91-8da6b4747032</uid>
+      <callers>
+        <uid>0c97bde8-0866-47f0-b249-2038b00d6d70</uid>
+        <uid>bd5edac3-4413-41a1-9b29-821906803301</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>Sovren cannot parse the resume</name>
+      <uid>9e7eeea2-d092-4c59-b66e-fe289b080138</uid>
+      <callers>
+        <uid>0c97bde8-0866-47f0-b249-2038b00d6d70</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>PNG creation fails</name>
+      <uid>9ab3e8d0-6ab7-4231-ac73-c9c48a6f9127</uid>
+      <callers>
+        <uid>57a6eb19-dc13-4706-91c7-0fe74eeaec30</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>default icon of PDF displays</name>
+      <uid>343625b5-5a08-471a-86ca-3f71263f1b8f</uid>
+      <callers>
+        <uid>57a6eb19-dc13-4706-91c7-0fe74eeaec30</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>user clicks 'save' on parsed resume</name>
+      <uid>5306474f-cd7a-4aae-9ee2-860eb548da6d</uid>
+      <callers>
+        <uid>8344583c-52f8-441b-bf30-c0edd6962c18</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>that email already has a resume in the system on that job</name>
+      <uid>0b0b370b-2444-4fe2-b904-6ad2be979c9b</uid>
+      <callers>
+        <uid>8344583c-52f8-441b-bf30-c0edd6962c18</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>user is notified that this person already has a resume for this job - do you want to use that one? or the new one?</name>
+      <uid>82df524b-f179-46fe-a1e0-44b7fe75f2ab</uid>
+      <callers>
+        <uid>8344583c-52f8-441b-bf30-c0edd6962c18</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>I click 'yes, replace'</name>
+      <uid>ddd7ffaa-48ff-48d1-82b8-fae2e47ebada</uid>
+      <callers>
+        <uid>8344583c-52f8-441b-bf30-c0edd6962c18</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>the back end keeps the original</name>
+      <uid>56a9a616-900f-4032-8865-3fc43c9f86b1</uid>
+      <callers>
+        <uid>8344583c-52f8-441b-bf30-c0edd6962c18</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>I am a job owner/editor, and I am going to use unitive resume reviewer</name>
+      <uid>6d785356-bb3c-4d08-ac42-524f667bbe9d</uid>
+      <callers>
+        <uid>f404d3f2-b79f-4cd3-b452-30e6c3eea87c</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>a thumbnail preview shows of the resume in the field</name>
+      <uid>95d26032-0284-4c24-9e42-668139290a9d</uid>
+      <callers>
+        <uid>f404d3f2-b79f-4cd3-b452-30e6c3eea87c</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>I am user</name>
+      <uid>111638f1-269a-49c0-915d-6840ff68c969</uid>
+      <callers>
+        <uid>cd93550d-6732-4396-b912-040a6eb9061d</uid>
+        <uid>7cdd7b03-8cb8-4635-a998-514af90bcb10</uid>
+        <uid>7580a7f0-4b70-459e-9e30-081f1f3a9a6f</uid>
+        <uid>395e6e66-c8f7-41a0-ad6e-3df32ab2f530</uid>
+        <uid>a0ddadce-e51c-40b2-8ba0-e02517fec52d</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>I have saved at least one interview question to one interviewer on 'build interview' page or at least one resume reviewed</name>
+      <uid>9488ef8c-9ef5-4e91-bbb3-222097bcda94</uid>
+      <callers>
+        <uid>a0ddadce-e51c-40b2-8ba0-e02517fec52d</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>Job has 0 applicants approved for interview</name>
+      <uid>cffef6e3-c838-413b-a58e-05f07ab10d92</uid>
+      <callers>
+        <uid>a0ddadce-e51c-40b2-8ba0-e02517fec52d</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>"p1" button is blue and not wiggle</name>
+      <uid>99840b81-ebd3-440a-a793-bb81745427ab</uid>
+      <parameters>
+        <parameter>
+          <name>p1</name>
+        </parameter>
+      </parameters>
+      <callers>
+        <uid>a0ddadce-e51c-40b2-8ba0-e02517fec52d</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>I'm on the "p1" page</name>
+      <uid>ccbdd29b-450e-48c3-883f-b2b46c1c31a6</uid>
+      <parameters>
+        <parameter>
+          <name>p1</name>
+        </parameter>
+      </parameters>
+      <callers>
+        <uid>cd93550d-6732-4396-b912-040a6eb9061d</uid>
+        <uid>7cdd7b03-8cb8-4635-a998-514af90bcb10</uid>
+        <uid>395e6e66-c8f7-41a0-ad6e-3df32ab2f530</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>Job is created</name>
+      <uid>be1652c0-7ee1-4b2a-8fa6-4ec01cc04f0d</uid>
+      <callers>
+        <uid>395e6e66-c8f7-41a0-ad6e-3df32ab2f530</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>0 resumes added</name>
+      <uid>2f06ecf5-8ce9-4d8d-b025-e0cd41e03efd</uid>
+      <callers>
+        <uid>395e6e66-c8f7-41a0-ad6e-3df32ab2f530</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>0 applicants approved for interview</name>
+      <uid>042ff3ae-c0d9-4519-922b-bac8904040b2</uid>
+      <callers>
+        <uid>cd93550d-6732-4396-b912-040a6eb9061d</uid>
+        <uid>7cdd7b03-8cb8-4635-a998-514af90bcb10</uid>
+        <uid>395e6e66-c8f7-41a0-ad6e-3df32ab2f530</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>there are no question-interviewers saved</name>
+      <uid>e3bf5f36-b8b3-4b0a-94c1-7461205da037</uid>
+      <callers>
+        <uid>cd93550d-6732-4396-b912-040a6eb9061d</uid>
+        <uid>7cdd7b03-8cb8-4635-a998-514af90bcb10</uid>
+        <uid>395e6e66-c8f7-41a0-ad6e-3df32ab2f530</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>"p1" should be primary button and wiggle</name>
+      <uid>9880ed3f-98c3-4e62-b4d1-06543f81ba85</uid>
+      <parameters>
+        <parameter>
+          <name>p1</name>
+        </parameter>
+      </parameters>
+      <callers>
+        <uid>cd93550d-6732-4396-b912-040a6eb9061d</uid>
+        <uid>7cdd7b03-8cb8-4635-a998-514af90bcb10</uid>
+        <uid>395e6e66-c8f7-41a0-ad6e-3df32ab2f530</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>I have added any applicants </name>
+      <uid>3788f936-d768-4d2b-ad44-a8da7872f2d7</uid>
+      <callers>
+        <uid>7580a7f0-4b70-459e-9e30-081f1f3a9a6f</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>at least one interview question is saved (regardless of whether i've added or reviewed resumes)</name>
+      <uid>2dc1ee2d-8517-4439-8864-18175d6e8d48</uid>
+      <callers>
+        <uid>7580a7f0-4b70-459e-9e30-081f1f3a9a6f</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>I click back to job dashboard</name>
+      <uid>a88eb767-cbd8-46d4-8447-718101ee1ba8</uid>
+    </actionword>
+    <actionword>
+      <name>there is not already a scheduled interview </name>
+      <uid>d25c78e0-d7a5-4141-aae0-4e12670f505f</uid>
+      <callers>
+        <uid>7580a7f0-4b70-459e-9e30-081f1f3a9a6f</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>"p1" button is blue and NOT wiggle</name>
+      <uid>872a363c-9ee4-4a0b-9085-cbbcbe5ff756</uid>
+      <parameters>
+        <parameter>
+          <name>p1</name>
+        </parameter>
+      </parameters>
+      <callers>
+        <uid>7580a7f0-4b70-459e-9e30-081f1f3a9a6f</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>Step Six!</name>
+      <uid>dcd1fe20-699e-415b-ad66-664b0bda1ab2</uid>
+    </actionword>
+    <actionword>
+      <name>a miracle occurs</name>
+      <uid>964d9fc6-974a-4abc-885e-dfadfe442d7f</uid>
+    </actionword>
+    <actionword>
+      <name>Race you to Seven</name>
+      <uid>50a9918a-bf04-421f-b8a9-251601351644</uid>
+    </actionword>
+    <actionword>
+      <name>Race you to Eight!</name>
+      <uid>ac9c2ac1-a247-4693-8b2a-cd83b02a0cf0</uid>
+    </actionword>
+    <actionword>
+      <name>Race you to nine!</name>
+      <uid>955b1ab9-55a6-42b4-9ed2-37931631b33e</uid>
+    </actionword>
+    <actionword>
+      <name>can you type?</name>
+      <uid>53d45aab-d67a-46eb-80af-a838d78ab6ee</uid>
+    </actionword>
+    <actionword>
+      <name>Race you to eleven!</name>
+      <uid>731597cb-a83f-4e58-a47d-61b0061c33f3</uid>
+    </actionword>
+    <actionword>
+      <name>job has 2 or more resumes added</name>
+      <uid>4b549b27-f24f-45db-89dc-eb1e90ee76a7</uid>
+      <callers>
+        <uid>cd93550d-6732-4396-b912-040a6eb9061d</uid>
+        <uid>7cdd7b03-8cb8-4635-a998-514af90bcb10</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>0 reviewed</name>
+      <uid>50e7657c-bed8-42d2-83a7-b4ef1f7e98c7</uid>
+      <callers>
+        <uid>cd93550d-6732-4396-b912-040a6eb9061d</uid>
+        <uid>7cdd7b03-8cb8-4635-a998-514af90bcb10</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>we are on the </name>
+      <uid>0c6a2143-fdbe-496b-a0e1-f3e071e21976</uid>
+    </actionword>
+    <actionword>
+      <name>it should show the search bar</name>
+      <uid>4ba6f594-9205-4e1b-93bd-e50a40cc836a</uid>
+      <callers>
+        <uid>26845f51-8a0b-42dc-a246-f3551909b3b0</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>I'm on the Job Copy page</name>
+      <uid>38770678-af44-4b11-b13a-fc1eac87c04d</uid>
+      <callers>
+        <uid>c9101e7c-f740-4c52-84a0-d24088c189ad</uid>
+        <uid>d80810ad-b3fb-4610-ba94-ee75b2426fbd</uid>
+        <uid>2423433d-c5ef-442e-b719-7b5025fc33f1</uid>
+        <uid>bfba6c4f-72a3-4ee9-9c39-2e67f6ead50b</uid>
+        <uid>cfcc0084-e53e-40f7-ba5c-3c1446f65826</uid>
+        <uid>26845f51-8a0b-42dc-a246-f3551909b3b0</uid>
+        <uid>93c25f51-8073-4023-9209-5bd3ba7bd48a</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>it should show the list of available reqs and the extra data with it</name>
+      <uid>7e259a35-64d0-4d4f-a961-85b3a7ae7118</uid>
+      <callers>
+        <uid>93c25f51-8073-4023-9209-5bd3ba7bd48a</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>it should show a no-data message when there are no reqs available to the user</name>
+      <uid>b2b23573-abcb-4d1a-9ba4-2a7b0f9f1955</uid>
+      <callers>
+        <uid>cfcc0084-e53e-40f7-ba5c-3c1446f65826</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>it should show a no-data message when there are no reqs after searching/filtering</name>
+      <uid>d1f1092e-a953-4378-8810-87cdb731aa41</uid>
+      <callers>
+        <uid>bfba6c4f-72a3-4ee9-9c39-2e67f6ead50b</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>it should show the job description when clicking the "p1" button</name>
+      <uid>3760f85b-8bde-41e1-aec4-a2a0fed82261</uid>
+      <parameters>
+        <parameter>
+          <name>p1</name>
+        </parameter>
+      </parameters>
+      <callers>
+        <uid>2423433d-c5ef-442e-b719-7b5025fc33f1</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>it should create a copy of the req and job description when clicking the "p1" button</name>
+      <uid>550968be-7422-4fd2-bfe5-bb264acfede8</uid>
+      <parameters>
+        <parameter>
+          <name>p1</name>
+        </parameter>
+      </parameters>
+      <callers>
+        <uid>d80810ad-b3fb-4610-ba94-ee75b2426fbd</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>it should show ten reqs and a show more link</name>
+      <uid>c5bc4e32-5ecd-493b-927e-c12abbe088b2</uid>
+      <steps>
+        <call>
+          <actionword>it should show "p1" reqs</actionword>
+          <annotation/>
+          <arguments>
+            <argument>
+              <name>p1</name>
+              <value>
+                <template>
+                  <stringliteral>10</stringliteral>
+                </template>
+              </value>
+            </argument>
+          </arguments>
+        </call>
+        <call>
+          <actionword>it should show "p1" link</actionword>
+          <annotation/>
+          <arguments>
+            <argument>
+              <name>p1</name>
+              <value>
+                <template>
+                  <stringliteral>Show more</stringliteral>
+                </template>
+              </value>
+            </argument>
+          </arguments>
+        </call>
+      </steps>
+      <callers>
+        <uid>c9101e7c-f740-4c52-84a0-d24088c189ad</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>the setup for RequisitionCopyCtrl</name>
+      <uid>d9910b5a-64ce-4949-8b3a-9066c47fbbeb</uid>
+      <callers>
+        <uid>b813c7e5-cc11-4d78-9ea7-bcd74c5fe214</uid>
+        <uid>f3030898-d9ba-43a5-a8bc-5d268c66c338</uid>
+        <uid>2c29b611-288c-46cd-85f5-12eb164486f8</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>it should show a job description popup</name>
+      <uid>a6d43737-4bd1-4435-a3d5-afb6774e5f86</uid>
+      <callers>
+        <uid>2c29b611-288c-46cd-85f5-12eb164486f8</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>it should request to copy the given req and navigate to the requisition edit page</name>
+      <uid>118cc205-bf99-419b-bffc-b4f6e3278908</uid>
+      <callers>
+        <uid>f3030898-d9ba-43a5-a8bc-5d268c66c338</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>it should show an error if it fails</name>
+      <uid>6b7ab929-6dcb-4a80-b691-d8185b8da912</uid>
+      <callers>
+        <uid>b813c7e5-cc11-4d78-9ea7-bcd74c5fe214</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>it should show "p1" reqs</name>
+      <uid>9abc525d-c012-49c3-a7fe-16c494c08071</uid>
+      <parameters>
+        <parameter>
+          <name>p1</name>
+        </parameter>
+      </parameters>
+      <callers>
+        <uid>c5bc4e32-5ecd-493b-927e-c12abbe088b2</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>it should show "p1" link</name>
+      <uid>2f0fd4da-0865-46f7-8774-cdb4ae49affa</uid>
+      <parameters>
+        <parameter>
+          <name>p1</name>
+        </parameter>
+      </parameters>
+      <callers>
+        <uid>c5bc4e32-5ecd-493b-927e-c12abbe088b2</uid>
+      </callers>
+    </actionword>
+  </actionwords>
+</project>

@@ -11,6 +11,7 @@ class FileConfigParser
   def self.update_options(options, reporter)
     config = ParseConfig.new(options.config)
     config.get_params.each do |param|
+      puts "param: #{param}" if options.verbose
       next if options.__cli_args && options.__cli_args.include?(param.to_sym)
       if falsy?(config[param])
         options[param] = false
@@ -151,6 +152,7 @@ class OptionsParser
       Option.new('c', 'config-file=PATH', nil, String, "Configuration file", :config),
       Option.new(nil, 'overriden-templates=PATH', '', String, "Folder for overriden templates", :overriden_templates),
       Option.new(nil, 'test-run-id=ID', '', String, "Export data from a test run", :test_run_id),
+      Option.new(nil, 'scenario-tags=TAGS', '', String, "Filter scenarios by tags", :filter_tags),
       Option.new(nil, 'only=CATEGORIES', nil, String, "Restrict export to given file categories (--only=list to list them)", :only),
       Option.new('x', 'xml-file=PROJECT_XML', nil, String, "XML file to use instead of fetching it from Hiptest", :xml_file),
       Option.new(nil, 'tests-only', false, nil, "(deprecated) alias for --only=tests", :tests_only),
@@ -162,6 +164,7 @@ class OptionsParser
       Option.new(nil, 'show-actionwords-renamed', false, nil, "Output signatures of renamed action words", :aw_renamed),
       Option.new(nil, 'show-actionwords-signature-changed', false, nil, "Output signatures of action words for which signature changed", :aw_signature_changed),
       Option.new(nil, 'show-actionwords-definition-changed', false, nil, "Output action words for which definition changed", :aw_definition_changed),
+      Option.new(nil, 'merge-root-folders', false, nil, "Merge root folders when exporting", :merge_root_folders),
       Option.new(nil, 'with-folders', false, nil, "Use folders hierarchy to export files in respective directories", :with_folders),
       Option.new(nil, 'split-scenarios', false, nil, "Export each scenario in a single file", :split_scenarios),
       Option.new(nil, 'leafless-export', false, nil, "Use only last level action word", :leafless_export),
@@ -357,6 +360,7 @@ class LanguageGroupConfig
     @output_directory = user_params.output_directory || ""
     @filename_pattern = user_params.filename_pattern
     @split_scenarios = user_params.split_scenarios
+    @merge_root_folders = user_params.merge_root_folders
     @with_folders = user_params.with_folders
     @leafless_export = user_params.leafless_export
     @language_group_params = language_group_params || {}
@@ -370,6 +374,10 @@ class LanguageGroupConfig
 
   def filename_pattern
     @filename_pattern || self[:named_filename]
+  end
+
+  def merge_root_folders?
+    @merge_root_folders
   end
 
   def with_folders?
@@ -487,7 +495,7 @@ class LanguageGroupConfig
     return "" unless with_folders?
     folder = node.folder
     hierarchy = []
-    while folder && !folder.root?
+    while folder && !folder.root? && !(merge_root_folders? && folder.parent.root?)
       hierarchy << normalized_dirname(folder.children[:name])
       folder = folder.parent
     end
