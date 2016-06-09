@@ -13,13 +13,15 @@ module Hiptest
     def prune
       # Don't prune if there are no filters.  While this allows unused actionwords to remain, it preserves backward
       # compatibility.
-      return unless filters?
+      return unless filters? || prune_actionwords?
       filter_tags = Set.new @options.filter_tags.split(',')
-      return if filter_tags.empty?
 
-      scenarios = find_tagged_scenarios(filter_tags)
-      prune_scenarios(scenarios)
-      prune_scenario_snapshots(scenarios)
+      unless filter_tags.empty?
+        scenarios = find_tagged_scenarios(filter_tags)
+        prune_scenarios(scenarios)
+        prune_scenario_snapshots(scenarios)
+      end
+
       prune_actionwords
       prune_actionword_snapshots
       return @xml
@@ -35,6 +37,10 @@ module Hiptest
 
     def filters?
       return !@options.filter_tags.empty?
+    end
+
+    def prune_actionwords?
+      return @options.prune_actionwords
     end
 
     # Return the set of scenario names that match any of the filter tags.

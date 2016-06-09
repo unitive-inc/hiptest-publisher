@@ -763,6 +763,55 @@ describe Hiptest::Publisher do
     end
   end
 
+  describe "--prune-actionwords" do
+    def run_publisher_command(*extra_args)
+      stub_request(:get, "https://hiptest.net/publication/123456789/project").
+        to_return(body: File.read('samples/xml_input/cash_withdrawal_unused_actionwords.xml'))
+      args = [
+        "--language", "ruby",
+        "--output-directory", output_dir,
+        "--token", "123456789",
+      ] + extra_args
+      publisher = Hiptest::Publisher.new(args, listeners: [ErrorListener.new])
+      publisher.run
+    end
+
+    it "does not prune actionwords by default" do
+      run_publisher_command()
+      expect_same_files("samples/expected_output/prune-actionwords-unpruned", output_dir)
+    end
+
+    it "prunes actionwords when asked" do
+      run_publisher_command("--prune-actionwords")
+      expect_same_files("samples/expected_output/prune-actionwords-pruned", output_dir)
+    end
+  end
+
+  describe "--prune-actionwords (for test run)" do
+    def run_publisher_command(*extra_args)
+      stub_request(:get, "https://hiptest.net/publication/123456789/test_run/999").
+        to_return(body: File.read('samples/xml_input/cash_withdrawal_test_run.xml'))
+      args = [
+        "--language", "ruby",
+        "--output-directory", output_dir,
+        "--test-run-id", "999",
+        "--token", "123456789",
+      ] + extra_args
+      publisher = Hiptest::Publisher.new(args, listeners: [ErrorListener.new])
+      publisher.run
+    end
+
+    it "does not prune actionwords by default" do
+      run_publisher_command()
+      expect_same_files("samples/expected_output/prune-actionwords-test-run-unpruned", output_dir)
+    end
+
+    it "prunes actionwords when asked" do
+      run_publisher_command("--prune-actionwords")
+      expect_same_files("samples/expected_output/prune-actionwords-test-run-pruned", output_dir)
+    end
+  end
+
   describe "--scenario-tags (without snapshots)" do
     def run_publisher_command(*extra_args)
       stub_request(:get, "https://hiptest.net/publication/123456789/project").
