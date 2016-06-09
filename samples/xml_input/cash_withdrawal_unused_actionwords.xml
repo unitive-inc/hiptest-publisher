@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project format="0.1">
+  <name>Testing CASH WITHDRAWAL (sample N°2)</name>
+  <uid>fd6f24c8-8cbe-4438-899f-084de8fb5376</uid>
+  <testPlan>
+    <folder>
+      <name>Testing CASH WITHDRAWAL (sample N°2)</name>
+      <uid>2c401045-de40-46a5-9a33-f977189a10c3</uid>
+      <order_in_parent>3692763</order_in_parent>
+    </folder>
+    <folder>
+      <name>Account Holder withdraws cash</name>
+      <uid>0b17c73a-f6bd-4cde-992f-9bf34483b15b</uid>
+      <description>As an Account Holder
+I want to withdraw cash from an ATM
+So that I can get money when the bank is closed</description>
+      <parentUid>2c401045-de40-46a5-9a33-f977189a10c3</parentUid>
+      <order_in_parent>4194304</order_in_parent>
+    </folder>
+    <folder>
+      <name>Account Holder transfers cash</name>
+      <uid>59e71d6a-d1a9-4704-9850-dc36c5cb868e</uid>
+      <description>As an Account Holder
+I want to transfer cash from an ATM
+So that I can transfer money between accounts</description>
+      <parentUid>2c401045-de40-46a5-9a33-f977189a10c3</parentUid>
+      <order_in_parent>0</order_in_parent>
+    </folder>
+  </testPlan>
+  <scenarios>
+    <scenario>
+      <name>Account has sufficient funds</name>
+      <uid>ed6ab167-cd3b-490b-b9b9-a42ac2c34689</uid>
+      <folderUid>0b17c73a-f6bd-4cde-992f-9bf34483b15b</folderUid>
+      <order_in_parent>0</order_in_parent>
+      <datatable>
+        <dataset>
+          <name>withdraw $100</name>
+          <datasetUid>f9b9ab4a-93d5-4722-8a93-50cb83edc0e5</datasetUid>
+          <raw_data>
+            <data>
+              <name>amount</name>
+              <value>$100</value>
+            </data>
+            <data>
+              <name>ending_balance</name>
+              <value>$0</value>
+            </data>
+          </raw_data>
+          <arguments>
+            <argument>
+              <name>amount</name>
+              <value>
+                <stringliteral>$100</stringliteral>
+              </value>
+            </argument>
+            <argument>
+              <name>ending_balance</name>
+              <value>
+                <stringliteral>$0</stringliteral>
+              </value>
+            </argument>
+          </arguments>
+        </dataset>
+        <dataset>
+          <name>withdraw $50</name>
+          <datasetUid>e6f05e15-65ec-48db-8a96-6ece7c32c5d9</datasetUid>
+          <raw_data>
+            <data>
+              <name>amount</name>
+              <value>$50</value>
+            </data>
+            <data>
+              <name>ending_balance</name>
+              <value>$50</value>
+            </data>
+          </raw_data>
+          <arguments>
+            <argument>
+              <name>amount</name>
+              <value>
+                <stringliteral>$50</stringliteral>
+              </value>
+            </argument>
+            <argument>
+              <name>ending_balance</name>
+              <value>
+                <stringliteral>$50</stringliteral>
+              </value>
+            </argument>
+          </arguments>
+        </dataset>
+        <dataset>
+          <name>withdraw $20</name>
+          <datasetUid>5df5e667-064d-4ce8-9e1d-4a43bdd91fd2</datasetUid>
+          <raw_data>
+            <data>
+              <name>amount</name>
+              <value>$20</value>
+            </data>
+            <data>
+              <name>ending_balance</name>
+              <value>$80</value>
+            </data>
+          </raw_data>
+          <arguments>
+            <argument>
+              <name>amount</name>
+              <value>
+                <stringliteral>$20</stringliteral>
+              </value>
+            </argument>
+            <argument>
+              <name>ending_balance</name>
+              <value>
+                <stringliteral>$80</stringliteral>
+              </value>
+            </argument>
+          </arguments>
+        </dataset>
+      </datatable>
+      <parameters>
+        <parameter>
+          <name>amount</name>
+        </parameter>
+        <parameter>
+          <name>ending_balance</name>
+        </parameter>
+      </parameters>
+      <steps>
+        <call>
+          <actionword>the account balance is "balance"</actionword>
+          <annotation>given</annotation>
+          <arguments>
+            <argument>
+              <name>balance</name>
+              <value>
+                <template>
+                  <stringliteral>$100</stringliteral>
+                </template>
+              </value>
+            </argument>
+          </arguments>
+        </call>
+        <call>
+          <actionword>the machine contains enough money</actionword>
+          <annotation>and</annotation>
+        </call>
+        <call>
+          <actionword>the card is valid</actionword>
+          <annotation>and</annotation>
+        </call>
+        <call>
+          <actionword>the Account Holder requests "amount"</actionword>
+          <annotation>when</annotation>
+          <arguments>
+            <argument>
+              <name>amount</name>
+              <value>
+                <template>
+                  <var>amount</var>
+                </template>
+              </value>
+            </argument>
+          </arguments>
+        </call>
+        <call>
+          <actionword>the ATM should dispense "amount"</actionword>
+          <annotation>then</annotation>
+          <arguments>
+            <argument>
+              <name>amount</name>
+              <value>
+                <template>
+                  <var>amount</var>
+                </template>
+              </value>
+            </argument>
+          </arguments>
+        </call>
+        <call>
+          <actionword>the account balance should be "balance"</actionword>
+          <annotation>and</annotation>
+          <arguments>
+            <argument>
+              <name>balance</name>
+              <value>
+                <template>
+                  <var>ending_balance</var>
+                </template>
+              </value>
+            </argument>
+          </arguments>
+        </call>
+        <call>
+          <actionword>the card should be returned</actionword>
+          <annotation>and</annotation>
+        </call>
+      </steps>
+    </scenario>
+    <scenario>
+      <name>Account has insufficient funds</name>
+      <uid>152ec571-9e09-45be-b648-1677e9772c7d</uid>
+      <folderUid>0b17c73a-f6bd-4cde-992f-9bf34483b15b</folderUid>
+      <order_in_parent>4194304</order_in_parent>
+      <steps>
+        <call>
+          <actionword>the account balance is "balance"</actionword>
+          <annotation>given</annotation>
+          <arguments>
+            <argument>
+              <name>balance</name>
+              <value>
+                <template>
+                  <stringliteral>$10</stringliteral>
+                </template>
+              </value>
+            </argument>
+          </arguments>
+        </call>
+        <call>
+          <actionword>the card is valid</actionword>
+          <annotation>and</annotation>
+        </call>
+        <call>
+          <actionword>the machine contains enough money</actionword>
+          <annotation>and</annotation>
+        </call>
+        <call>
+          <actionword>the Account Holder requests "amount"</actionword>
+          <annotation>when</annotation>
+          <arguments>
+            <argument>
+              <name>amount</name>
+              <value>
+                <template>
+                  <stringliteral>$20</stringliteral>
+                </template>
+              </value>
+            </argument>
+          </arguments>
+        </call>
+        <call>
+          <actionword>the ATM should not dispense any money</actionword>
+          <annotation>then</annotation>
+        </call>
+        <call>
+          <actionword>the ATM should say there are insufficient funds</actionword>
+          <annotation>and</annotation>
+        </call>
+      </steps>
+    </scenario>
+    <scenario>
+      <name>Card has been disabled</name>
+      <uid>14792732-55af-4747-b771-370af0c06a6b</uid>
+      <folderUid>0b17c73a-f6bd-4cde-992f-9bf34483b15b</folderUid>
+      <order_in_parent>6291456</order_in_parent>
+      <steps>
+        <call>
+          <actionword>the card is disabled</actionword>
+          <annotation>given</annotation>
+        </call>
+        <call>
+          <actionword>the Account Holder requests "amount"</actionword>
+          <annotation>when</annotation>
+          <arguments>
+            <argument>
+              <name>amount</name>
+              <value>
+                <template>
+                  <stringliteral>$10</stringliteral>
+                </template>
+              </value>
+            </argument>
+          </arguments>
+        </call>
+        <call>
+          <actionword>the ATM should retain the card</actionword>
+          <annotation>then</annotation>
+        </call>
+        <call>
+          <actionword>the ATM should say the card has been retained</actionword>
+          <annotation>and</annotation>
+        </call>
+      </steps>
+    </scenario>
+    <scenario>
+      <name>Account has sufficient funds for transferring cash</name>
+      <uid>75aa0ebe-ae34-4aaf-b9f1-52243ccfffc2</uid>
+      <folderUid>59e71d6a-d1a9-4704-9850-dc36c5cb868e</folderUid>
+      <order_in_parent>0</order_in_parent>
+      <steps>
+        <call>
+          <actionword>the account balance is "balance"</actionword>
+          <annotation>given</annotation>
+          <arguments>
+            <argument>
+              <name>balance</name>
+              <value>
+                <template>
+                  <stringliteral>$100</stringliteral>
+                </template>
+              </value>
+            </argument>
+          </arguments>
+        </call>
+        <call>
+          <actionword>the savings account balance is "amount"</actionword>
+          <annotation>and</annotation>
+          <arguments>
+            <argument>
+              <name>amount</name>
+              <value>
+                <template>
+                  <stringliteral>$1000</stringliteral>
+                </template>
+              </value>
+            </argument>
+          </arguments>
+        </call>
+        <call>
+          <actionword>the card is valid</actionword>
+          <annotation>and</annotation>
+        </call>
+        <call>
+          <actionword>the Account Holder transfers "amount" to the savings account</actionword>
+          <annotation>when</annotation>
+          <arguments>
+            <argument>
+              <name>amount</name>
+              <value>
+                <template>
+                  <stringliteral>$20</stringliteral>
+                </template>
+              </value>
+            </argument>
+          </arguments>
+        </call>
+        <call>
+          <actionword>the ATM should dispense "amount"</actionword>
+          <annotation>and</annotation>
+          <arguments>
+            <argument>
+              <name>amount</name>
+              <value>
+                <template>
+                  <stringliteral>$0</stringliteral>
+                </template>
+              </value>
+            </argument>
+          </arguments>
+        </call>
+        <call>
+          <actionword>the account balance is "balance"</actionword>
+          <annotation>and</annotation>
+          <arguments>
+            <argument>
+              <name>balance</name>
+              <value>
+                <template>
+                  <stringliteral>$80</stringliteral>
+                </template>
+              </value>
+            </argument>
+          </arguments>
+        </call>
+        <call>
+          <actionword>the savings account balance should be "amount"</actionword>
+          <annotation>and</annotation>
+          <arguments>
+            <argument>
+              <name>amount</name>
+              <value>
+                <template>
+                  <stringliteral>$1020</stringliteral>
+                </template>
+              </value>
+            </argument>
+          </arguments>
+        </call>
+        <call>
+          <actionword>the card should be returned</actionword>
+          <annotation>and</annotation>
+        </call>
+      </steps>
+    </scenario>
+  </scenarios>
+  <actionwords>
+    <actionword>
+      <name>the card is valid</name>
+      <uid>451942c6-62d3-4911-8cb4-afa5e24f6ab4</uid>
+      <callers>
+        <uid>ed6ab167-cd3b-490b-b9b9-a42ac2c34689</uid>
+        <uid>152ec571-9e09-45be-b648-1677e9772c7d</uid>
+        <uid>75aa0ebe-ae34-4aaf-b9f1-52243ccfffc2</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>the machine contains enough money</name>
+      <uid>a4b2f484-e72d-488b-8805-f8e658602420</uid>
+      <callers>
+        <uid>ed6ab167-cd3b-490b-b9b9-a42ac2c34689</uid>
+        <uid>152ec571-9e09-45be-b648-1677e9772c7d</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>the card should be returned</name>
+      <uid>5aed7d04-d841-4f2f-a145-3b03a0b3db8f</uid>
+      <callers>
+        <uid>ed6ab167-cd3b-490b-b9b9-a42ac2c34689</uid>
+        <uid>75aa0ebe-ae34-4aaf-b9f1-52243ccfffc2</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>the account balance is "balance"</name>
+      <uid>7750c571-a89c-4c45-ac08-9cf52d24ab10</uid>
+      <parameters>
+        <parameter>
+          <name>balance</name>
+        </parameter>
+      </parameters>
+      <callers>
+        <uid>ed6ab167-cd3b-490b-b9b9-a42ac2c34689</uid>
+        <uid>152ec571-9e09-45be-b648-1677e9772c7d</uid>
+        <uid>75aa0ebe-ae34-4aaf-b9f1-52243ccfffc2</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>the Account Holder requests "amount"</name>
+      <uid>771b8bf7-59b8-4d58-84ab-5e938daac2ed</uid>
+      <parameters>
+        <parameter>
+          <name>amount</name>
+        </parameter>
+      </parameters>
+      <callers>
+        <uid>ed6ab167-cd3b-490b-b9b9-a42ac2c34689</uid>
+        <uid>152ec571-9e09-45be-b648-1677e9772c7d</uid>
+        <uid>14792732-55af-4747-b771-370af0c06a6b</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>the ATM should dispense "amount"</name>
+      <uid>eaa0f960-a28c-48e1-b6d5-bea0aa39f3f3</uid>
+      <parameters>
+        <parameter>
+          <name>amount</name>
+        </parameter>
+      </parameters>
+      <callers>
+        <uid>ed6ab167-cd3b-490b-b9b9-a42ac2c34689</uid>
+        <uid>75aa0ebe-ae34-4aaf-b9f1-52243ccfffc2</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>the account balance should be "balance"</name>
+      <uid>92f04aa9-d2c3-40c9-929d-6aedd13a8d13</uid>
+      <parameters>
+        <parameter>
+          <name>balance</name>
+        </parameter>
+      </parameters>
+      <callers>
+        <uid>ed6ab167-cd3b-490b-b9b9-a42ac2c34689</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>the ATM should not dispense any money</name>
+      <uid>7e46dc9b-a388-46ec-bb60-5e32acbd4bb8</uid>
+      <callers>
+        <uid>152ec571-9e09-45be-b648-1677e9772c7d</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>the ATM should say there are insufficient funds</name>
+      <uid>34ceef68-309f-4b6b-a14b-a163f68f9715</uid>
+      <callers>
+        <uid>152ec571-9e09-45be-b648-1677e9772c7d</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>the card is disabled</name>
+      <uid>ff5109e8-5297-4cc0-a7c8-fa0a5e2a920b</uid>
+      <callers>
+        <uid>14792732-55af-4747-b771-370af0c06a6b</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>the ATM should retain the card</name>
+      <uid>ab626bfb-5d11-43ed-96f9-7155d432eef3</uid>
+      <callers>
+        <uid>14792732-55af-4747-b771-370af0c06a6b</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>the ATM should say the card has been retained</name>
+      <uid>9abd2802-dee8-41dd-8884-2ff6ca47c074</uid>
+      <callers>
+        <uid>14792732-55af-4747-b771-370af0c06a6b</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>the savings account balance is "amount"</name>
+      <uid>35c547ef-4a6e-448e-ad96-c44d45c02bc8</uid>
+      <parameters>
+        <parameter>
+          <name>amount</name>
+        </parameter>
+      </parameters>
+      <callers>
+        <uid>75aa0ebe-ae34-4aaf-b9f1-52243ccfffc2</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>the Account Holder transfers "amount" to the savings account</name>
+      <uid>3fec8412-d465-47f3-938c-e0a1ebeb1c87</uid>
+      <parameters>
+        <parameter>
+          <name>amount</name>
+        </parameter>
+      </parameters>
+      <callers>
+        <uid>75aa0ebe-ae34-4aaf-b9f1-52243ccfffc2</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>the savings account balance should be "amount"</name>
+      <uid>51cf9494-7d89-4d0f-8000-ec30b48a5f0d</uid>
+      <parameters>
+        <parameter>
+          <name>amount</name>
+        </parameter>
+      </parameters>
+      <callers>
+        <uid>75aa0ebe-ae34-4aaf-b9f1-52243ccfffc2</uid>
+      </callers>
+    </actionword>
+    <actionword>
+      <name>unused action word 1</name>
+      <uid>2b55e98a-bcbf-4bb5-b408-899dc89c1690</uid>
+    </actionword>
+    <actionword>
+      <name>unused action word 2</name>
+      <uid>6ffaa20b-9451-464d-bfd0-ec2c5d4411aa</uid>
+    </actionword>
+  </actionwords>
+</project>
